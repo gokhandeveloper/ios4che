@@ -549,8 +549,8 @@
 		52FB9A511A6C532700E71D16 = {
 			isa = PBXGroup;
 			children = (
-				52FB9A5C1A6C532700E71D16 /* PACS */,
-				52FB9A761A6C532800E71D16 /* PACSTests */,
+				52FB9A5C1A6C532700E71D16 /* ios4che */,
+				52FB9A761A6C532800E71D16 /* ios4cheTests */,
 				52FB9A5B1A6C532700E71D16 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -564,7 +564,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		52FB9A5C1A6C532700E71D16 /* PACS */ = {
+		52FB9A5C1A6C532700E71D16 /* ios4che */ = {
 			isa = PBXGroup;
 			children = (
 				521C7F511A89EF8800B8971A /* framework */,
@@ -602,6 +602,7 @@
 				52FB9A6C1A6C532700E71D16 /* LaunchScreen.xib */,
 				52FB9A5D1A6C532700E71D16 /* Supporting Files */,
 			);
+			name = ios4che;
 			path = PACS;
 			sourceTree = "<group>";
 		};
@@ -614,12 +615,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		52FB9A761A6C532800E71D16 /* PACSTests */ = {
+		52FB9A761A6C532800E71D16 /* ios4cheTests */ = {
 			isa = PBXGroup;
 			children = (
 				52FB9A791A6C532800E71D16 /* PACSTests.m */,
 				52FB9A771A6C532800E71D16 /* Supporting Files */,
 			);
+			name = ios4cheTests;
 			path = PACSTests;
 			sourceTree = "<group>";
 		};
