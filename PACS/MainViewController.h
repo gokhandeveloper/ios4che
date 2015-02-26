@@ -11,6 +11,7 @@
 @interface MainViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
 
 {
+    
     NSMutableArray *m_arrPatient;
     //NSString *turlFromLoginViewController;
     NSMutableArray *m_arrPatientSortedByStudyPk;

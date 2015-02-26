@@ -60,8 +60,6 @@
 		5526A7631A9640FE00405DC2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5526A7611A9640FE00405DC2 /* CoreGraphics.framework */; };
 		5526A7641A9640FE00405DC2 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5526A7621A9640FE00405DC2 /* CoreImage.framework */; };
 		5526A7661A96537C00405DC2 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5526A7651A96537C00405DC2 /* Accelerate.framework */; };
-		554403231A982D4F0031D30A /* testing.h in Headers */ = {isa = PBXBuildFile; fileRef = 554403211A982D4F0031D30A /* testing.h */; };
-		554403241A982D4F0031D30A /* testing.m in Sources */ = {isa = PBXBuildFile; fileRef = 554403221A982D4F0031D30A /* testing.m */; };
 		55B74BB71A9CDDE200A367A6 /* SettingsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 55B74BB51A9CDDE200A367A6 /* SettingsViewController.h */; };
 		55B74BB81A9CDDE200A367A6 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B74BB61A9CDDE200A367A6 /* SettingsViewController.m */; };
 		55B7D9121A96114F00441C11 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 55B7D8741A96114F00441C11 /* .gitignore */; };
@@ -243,8 +241,6 @@
 		5526A7611A9640FE00405DC2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		5526A7621A9640FE00405DC2 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		5526A7651A96537C00405DC2 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
-		554403211A982D4F0031D30A /* testing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testing.h; sourceTree = "<group>"; };
-		554403221A982D4F0031D30A /* testing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = testing.m; sourceTree = "<group>"; };
 		55B74BB51A9CDDE200A367A6 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		55B74BB61A9CDDE200A367A6 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		55B7D8741A96114F00441C11 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -579,8 +575,6 @@
 				52FB9A841A6C541500E71D16 /* LoginViewController.m */,
 				52051C921A78FE5A0058DBB6 /* MainViewController.h */,
 				52051C931A78FE5A0058DBB6 /* MainViewController.m */,
-				554403211A982D4F0031D30A /* testing.h */,
-				554403221A982D4F0031D30A /* testing.m */,
 				52051C951A78FF5F0058DBB6 /* FilterViewController.h */,
 				52051C961A78FF5F0058DBB6 /* FilterViewController.m */,
 				528649AA1A8B8185009A77B1 /* CustomTextField.h */,
@@ -914,7 +908,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				554403231A982D4F0031D30A /* testing.h in Headers */,
 				55B8C69F1A9B4FFA0066CD44 /* StudyViewController.h in Headers */,
 				55B74BB71A9CDDE200A367A6 /* SettingsViewController.h in Headers */,
 			);
@@ -980,7 +973,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 52FB9A551A6C532700E71D16 /* Build configuration list for PBXProject "PACS" */;
+			buildConfigurationList = 52FB9A551A6C532700E71D16 /* Build configuration list for PBXProject "ios4che" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -1083,7 +1076,6 @@
 				528649A31A8B7FAF009A77B1 /* IQSegmentedNextPrevious.m in Sources */,
 				52051C9A1A7907380058DBB6 /* Global.m in Sources */,
 				55B7D9291A96114F00441C11 /* CLCircleView.m in Sources */,
-				554403241A982D4F0031D30A /* testing.m in Sources */,
 				529AF1001A7286F20077DF37 /* UIRefreshControl+AFNetworking.m in Sources */,
 				55B7D9261A96114F00441C11 /* CLImageToolBase.m in Sources */,
 				529AF1011A7286F20077DF37 /* UIWebView+AFNetworking.m in Sources */,
@@ -1363,7 +1355,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		52FB9A551A6C532700E71D16 /* Build configuration list for PBXProject "PACS" */ = {
+		52FB9A551A6C532700E71D16 /* Build configuration list for PBXProject "ios4che" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				52FB9A7B1A6C532800E71D16 /* Debug */,

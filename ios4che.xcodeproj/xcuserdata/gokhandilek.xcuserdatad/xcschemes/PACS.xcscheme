@@ -17,7 +17,7 @@
                BlueprintIdentifier = "52FB9A591A6C532700E71D16"
                BuildableName = "PACS.app"
                BlueprintName = "PACS"
-               ReferencedContainer = "container:PACS.xcodeproj">
+               ReferencedContainer = "container:ios4che.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -31,7 +31,7 @@
                BlueprintIdentifier = "52FB9A721A6C532800E71D16"
                BuildableName = "PACSTests.xctest"
                BlueprintName = "PACSTests"
-               ReferencedContainer = "container:PACS.xcodeproj">
+               ReferencedContainer = "container:ios4che.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -49,7 +49,7 @@
                BlueprintIdentifier = "52FB9A721A6C532800E71D16"
                BuildableName = "PACSTests.xctest"
                BlueprintName = "PACSTests"
-               ReferencedContainer = "container:PACS.xcodeproj">
+               ReferencedContainer = "container:ios4che.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -59,7 +59,7 @@
             BlueprintIdentifier = "52FB9A591A6C532700E71D16"
             BuildableName = "PACS.app"
             BlueprintName = "PACS"
-            ReferencedContainer = "container:PACS.xcodeproj">
+            ReferencedContainer = "container:ios4che.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -78,7 +78,7 @@
             BlueprintIdentifier = "52FB9A591A6C532700E71D16"
             BuildableName = "PACS.app"
             BlueprintName = "PACS"
-            ReferencedContainer = "container:PACS.xcodeproj">
+            ReferencedContainer = "container:ios4che.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <EnvironmentVariables>
@@ -103,7 +103,7 @@
             BlueprintIdentifier = "52FB9A591A6C532700E71D16"
             BuildableName = "PACS.app"
             BlueprintName = "PACS"
-            ReferencedContainer = "container:PACS.xcodeproj">
+            ReferencedContainer = "container:ios4che.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
