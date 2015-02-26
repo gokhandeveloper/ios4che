@@ -60,6 +60,8 @@
 		5526A7631A9640FE00405DC2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5526A7611A9640FE00405DC2 /* CoreGraphics.framework */; };
 		5526A7641A9640FE00405DC2 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5526A7621A9640FE00405DC2 /* CoreImage.framework */; };
 		5526A7661A96537C00405DC2 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5526A7651A96537C00405DC2 /* Accelerate.framework */; };
+		55B516911A9F93F30044FA54 /* StudyViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 55B516901A9F93F30044FA54 /* StudyViewController.h */; };
+		55B516931A9F94000044FA54 /* StudyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B516921A9F94000044FA54 /* StudyViewController.m */; };
 		55B74BB71A9CDDE200A367A6 /* SettingsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 55B74BB51A9CDDE200A367A6 /* SettingsViewController.h */; };
 		55B74BB81A9CDDE200A367A6 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B74BB61A9CDDE200A367A6 /* SettingsViewController.m */; };
 		55B7D9121A96114F00441C11 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 55B7D8741A96114F00441C11 /* .gitignore */; };
@@ -110,8 +112,6 @@
 		55B7D9521A96114F00441C11 /* CLTextLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B7D90C1A96114F00441C11 /* CLTextLabel.m */; };
 		55B7D9531A96114F00441C11 /* CLTextSettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B7D90E1A96114F00441C11 /* CLTextSettingView.m */; };
 		55B7D9541A96114F00441C11 /* CLTextTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B7D9101A96114F00441C11 /* CLTextTool.m */; };
-		55B8C69F1A9B4FFA0066CD44 /* StudyViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 55B8C69D1A9B4FFA0066CD44 /* StudyViewController.h */; };
-		55B8C6A01A9B4FFA0066CD44 /* StudyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B8C69E1A9B4FFA0066CD44 /* StudyViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -241,6 +241,8 @@
 		5526A7611A9640FE00405DC2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		5526A7621A9640FE00405DC2 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		5526A7651A96537C00405DC2 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		55B516901A9F93F30044FA54 /* StudyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudyViewController.h; sourceTree = "<group>"; };
+		55B516921A9F94000044FA54 /* StudyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudyViewController.m; sourceTree = "<group>"; };
 		55B74BB51A9CDDE200A367A6 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		55B74BB61A9CDDE200A367A6 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		55B7D8741A96114F00441C11 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -337,8 +339,6 @@
 		55B7D90E1A96114F00441C11 /* CLTextSettingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLTextSettingView.m; sourceTree = "<group>"; };
 		55B7D90F1A96114F00441C11 /* CLTextTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLTextTool.h; sourceTree = "<group>"; };
 		55B7D9101A96114F00441C11 /* CLTextTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLTextTool.m; sourceTree = "<group>"; };
-		55B8C69D1A9B4FFA0066CD44 /* StudyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StudyViewController.h; path = ../StudyViewController.h; sourceTree = "<group>"; };
-		55B8C69E1A9B4FFA0066CD44 /* StudyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StudyViewController.m; path = ../StudyViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -589,8 +589,8 @@
 				524F3E521A89998E00FC12E7 /* DicomViewController.m */,
 				524F3E4E1A89973800FC12E7 /* DicomShowViewController.h */,
 				524F3E4F1A89973800FC12E7 /* DicomShowViewController.m */,
-				55B8C69D1A9B4FFA0066CD44 /* StudyViewController.h */,
-				55B8C69E1A9B4FFA0066CD44 /* StudyViewController.m */,
+				55B516901A9F93F30044FA54 /* StudyViewController.h */,
+				55B516921A9F94000044FA54 /* StudyViewController.m */,
 				52051C981A7907380058DBB6 /* Global.h */,
 				52051C991A7907380058DBB6 /* Global.m */,
 				52FE6CC21A898B3E004CBECB /* define.h */,
@@ -908,8 +908,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55B8C69F1A9B4FFA0066CD44 /* StudyViewController.h in Headers */,
 				55B74BB71A9CDDE200A367A6 /* SettingsViewController.h in Headers */,
+				55B516911A9F93F30044FA54 /* StudyViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1025,6 +1025,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				529AF0F11A7286F20077DF37 /* AFHTTPRequestOperation.m in Sources */,
+				55B516931A9F94000044FA54 /* StudyViewController.m in Sources */,
 				55B7D9141A96114F00441C11 /* CLImageEditor.m in Sources */,
 				55B74BB81A9CDDE200A367A6 /* SettingsViewController.m in Sources */,
 				55B7D9221A96114F00441C11 /* CLEffectBase.m in Sources */,
@@ -1033,7 +1034,6 @@
 				55B7D9161A96114F00441C11 /* CLImageToolInfo.m in Sources */,
 				529AF0FE1A7286F20077DF37 /* UIImageView+AFNetworking.m in Sources */,
 				55B7D9511A96114F00441C11 /* CLPickerView.m in Sources */,
-				55B8C6A01A9B4FFA0066CD44 /* StudyViewController.m in Sources */,
 				55B7D9311A96114F00441C11 /* UIDevice+SystemVersion.m in Sources */,
 				55B7D9271A96114F00441C11 /* CLRotateTool.m in Sources */,
 				55B7D92D1A96114F00441C11 /* CLToolbarMenuItem.m in Sources */,
