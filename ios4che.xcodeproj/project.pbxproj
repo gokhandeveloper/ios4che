@@ -60,6 +60,8 @@
 		5526A7631A9640FE00405DC2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5526A7611A9640FE00405DC2 /* CoreGraphics.framework */; };
 		5526A7641A9640FE00405DC2 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5526A7621A9640FE00405DC2 /* CoreImage.framework */; };
 		5526A7661A96537C00405DC2 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5526A7651A96537C00405DC2 /* Accelerate.framework */; };
+		55606C751AA18A8500863223 /* readme.md in Sources */ = {isa = PBXBuildFile; fileRef = 55606C731AA18A8500863223 /* readme.md */; };
+		55606C761AA18A8500863223 /* releaseNotes.ios4che in Resources */ = {isa = PBXBuildFile; fileRef = 55606C741AA18A8500863223 /* releaseNotes.ios4che */; };
 		55B516911A9F93F30044FA54 /* StudyViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 55B516901A9F93F30044FA54 /* StudyViewController.h */; };
 		55B516931A9F94000044FA54 /* StudyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B516921A9F94000044FA54 /* StudyViewController.m */; };
 		55B74BB71A9CDDE200A367A6 /* SettingsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 55B74BB51A9CDDE200A367A6 /* SettingsViewController.h */; };
@@ -241,6 +243,8 @@
 		5526A7611A9640FE00405DC2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		5526A7621A9640FE00405DC2 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		5526A7651A96537C00405DC2 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		55606C731AA18A8500863223 /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = SOURCE_ROOT; };
+		55606C741AA18A8500863223 /* releaseNotes.ios4che */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = releaseNotes.ios4che; sourceTree = SOURCE_ROOT; };
 		55B516901A9F93F30044FA54 /* StudyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudyViewController.h; sourceTree = "<group>"; };
 		55B516921A9F94000044FA54 /* StudyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudyViewController.m; sourceTree = "<group>"; };
 		55B74BB51A9CDDE200A367A6 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
@@ -567,6 +571,8 @@
 		52FB9A5C1A6C532700E71D16 /* ios4che */ = {
 			isa = PBXGroup;
 			children = (
+				55606C731AA18A8500863223 /* readme.md */,
+				55606C741AA18A8500863223 /* releaseNotes.ios4che */,
 				521C7F511A89EF8800B8971A /* framework */,
 				529AF0C91A7286F20077DF37 /* Lib */,
 				52FB9A611A6C532700E71D16 /* AppDelegate.h */,
@@ -1009,6 +1015,7 @@
 				52FB9A6E1A6C532700E71D16 /* LaunchScreen.xib in Resources */,
 				55B7D9131A96114F00441C11 /* CLImageEditor.bundle in Resources */,
 				52FB9A6B1A6C532700E71D16 /* Images.xcassets in Resources */,
+				55606C761AA18A8500863223 /* releaseNotes.ios4che in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1096,6 +1103,7 @@
 				55B7D9541A96114F00441C11 /* CLTextTool.m in Sources */,
 				529AF0F71A7286F20077DF37 /* AFURLRequestSerialization.m in Sources */,
 				529AF0FA1A7286F20077DF37 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				55606C751AA18A8500863223 /* readme.md in Sources */,
 				55B7D92F1A96114F00441C11 /* CLClassList.m in Sources */,
 				528649A61A8B7FAF009A77B1 /* IQTitleBarButtonItem.m in Sources */,
 				55B7D9321A96114F00441C11 /* UIImage+Utility.m in Sources */,

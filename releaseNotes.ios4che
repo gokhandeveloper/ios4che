@@ -1,0 +1,13 @@
+*Documentation Update
+-New feature
+=Bug fix
+&Scheduled feature
+
+Version 0.1
+-ipad & iPhone support
+- Filter by custom date, patient Id & name and modality
+- Async image loading
+- CLIImage integration (thanks to CLIImage open source image editing framework: https://github.com/yackle/CLImageEditor)
+- UICollection view to decrease the memory use
+& Https and port 8443 support
+& Load patient details on the image
