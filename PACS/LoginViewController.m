@@ -78,7 +78,7 @@
         webServiceDirectory = webServiceDirectory;
         loginWebService =@"/login.jsp";
 
-        [self.securitySwitch setOn:NO animated:YES];
+      //  [self.securitySwitch setOn:NO animated:YES];
     } else {
         http = @"http:";
         NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
@@ -107,7 +107,7 @@
         loginWebService =@"/login.jsp";
 
         
-        [self.securitySwitch setOn:YES animated:YES];
+      //  [self.securitySwitch setOn:YES animated:YES];
     }
     
     NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
@@ -139,7 +139,7 @@
             [self dismissViewControllerAnimated:YES completion:nil];
             NSLog(@"%@", [[NSUserDefaults standardUserDefaults] dictionaryRepresentation]);
             
-           // MainViewController.urlFromLoginViewController = txtWadoUrl.text;
+         
             
         }else{
             UIAlertView * alert =[[UIAlertView alloc ] initWithTitle:nil

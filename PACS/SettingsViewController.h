@@ -13,6 +13,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *passwordInSettings;
 @property (weak, nonatomic) IBOutlet UITextField *wadoUrlInSettings;
 @property (weak, nonatomic) IBOutlet UITextField *directoryInSettings;
+@property (weak, nonatomic) IBOutlet UISwitch *securitySwitchInSettings;
+
 - (IBAction)saveSettingsButton:(id)sender;
 
 @end

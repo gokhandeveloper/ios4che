@@ -226,6 +226,9 @@
                                     <action selector="saveSettingsButton:" destination="i1J-iP-XjF" eventType="touchUpInside" id="IKZ-Vn-vfu"/>
                                 </connections>
                             </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C2A-ym-onJ">
+                                <rect key="frame" x="21" y="377" width="51" height="31"/>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -233,6 +236,7 @@
                     <connections>
                         <outlet property="directoryInSettings" destination="cyX-ra-XdK" id="qM2-th-BUc"/>
                         <outlet property="passwordInSettings" destination="xiy-H8-ZRe" id="qvZ-vj-5Q0"/>
+                        <outlet property="securitySwitchInSettings" destination="C2A-ym-onJ" id="u0a-sh-6vo"/>
                         <outlet property="usernameInSettings" destination="shR-OE-DAw" id="G7N-GM-AxH"/>
                         <outlet property="wadoUrlInSettings" destination="xNB-P3-7Ih" id="gz2-95-C0p"/>
                     </connections>
@@ -427,7 +431,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="mmO-Ad-1Vq">
-                                <rect key="frame" x="-5" y="75" width="605" height="468"/>
+                                <rect key="frame" x="16" y="66" width="568" height="468"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
