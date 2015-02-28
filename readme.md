@@ -28,6 +28,6 @@ Once a new version is released, you may have to update the app and the web servi
 </ol>
 <h3>Contributions and Feedback</h3>
 
-If you are interesting in contributing to the project, please contact me. I would like to hear your feedback and feature requests.
+If you are interested in contributing to the project, please contact me. I would like to hear your feedback and feature requests.
 Thank you.
 
