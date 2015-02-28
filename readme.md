@@ -18,13 +18,14 @@ ios4che - open source iOS viewer app implementation for DCM4CHE Wado Service
 <li>Edit the files inside the web service directory according to your database connection credentials(default is database username: pascdb username: postgres password:password). You must also configure this otherwise the app will not work!</li>
 </ol>
 
-<h3> How to update <h3>
+<h3> How to update </h3>
+<ol>
 Once a new version is released, you may have to update the app and the web services provided at the same time. Otherwise the app will not function properly.
 <li>Copy the directory Web Services to dcm4chee-2.18.0/server/default/deploy/whatever-you-named-it.war and replace the existing files</li>
 <li>Edit the database connection credentials</li>
 <li>Delete the app from your iOS device.</li>
 <li>Run and recompile the project</li>
-
+</ol>
 <h3>Contributions and Feedback</h3>
 
 If you are interesting in contributing to the project, please contact me. I would like to hear your feedback and feature requests.
