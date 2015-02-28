@@ -32,7 +32,7 @@
 		String hashedPasswd = new String(Base64.encodeBase64(hashBytes));
 		// out.println("Encrypted Password: " + hashedPasswd + "<br/><br/><br/>");
 
-		String url = "jdbc:postgresql://localhost/pacsdb";
+		String url = "jdbc:postgresql://localhost/pacsdatabase";
 		Connection con;
 		ResultSet rs;
 		String s, szUsername, szPassword;
@@ -51,7 +51,7 @@
 
 		try
 		{
-			con = DriverManager.getConnection(url,"postgres", "password");
+			con = DriverManager.getConnection(url,"postgres", "1");
 
 			Statement st = con.createStatement();
 			rs = st.executeQuery(sqlstr);
@@ -61,7 +61,7 @@
 				szUsername = rs.getString(1);
 				szPassword = rs.getString(2);
 				// out.println("User: " + szUsername + "<br/>Password: " + szPassword + "<br/>");
-				if (szPassword.equals(hashedPasswd) == true){
+				if (szPassword.equals(hashedPasswd) == true && szUsername.equals(username) == true){
 					// out.println("Correct <br/><br/>");
 					nSuccess++;
 				}
@@ -90,7 +90,7 @@
 		out.println(username);
 		out.println(password);
 
-		String url = "jdbc:postgresql://localhost/postgres";
+		String url = "jdbc:postgresql://localhost/pacsdatabase";
 		Connection con;
 		ResultSet rs;
 		String s, szUsername, szPassword;
@@ -109,7 +109,7 @@
 
 		try
 		{
-			con = DriverManager.getConnection(url,"postgres", "password");
+			con = DriverManager.getConnection(url,"postgres", "1");
 
 			Statement st = con.createStatement();
 			rs = st.executeQuery(sqlstr);

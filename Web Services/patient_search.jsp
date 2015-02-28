@@ -6,9 +6,9 @@
 <%@ page import="org.json.simple.JSONArray" %>
 
 <%
-		final String DB_CONNECTIONSTRING = "jdbc:postgresql://localhost/pacsdb";
+		final String DB_CONNECTIONSTRING = "jdbc:postgresql://localhost/pacsdatabase";
 		final String DB_USERNAME = "postgres";
-		final String DB_PASSWORD = "password";
+		final String DB_PASSWORD = "1";
 
 		String szPatientId = request.getParameter("patient_id");
 		String szPatientName = request.getParameter("patient_name");
@@ -16,7 +16,7 @@
 		String szDateTo = request.getParameter("date_to");
 		String szDateType  = request.getParameter("date_type");
 		String szModality = request.getParameter("modality");
-
+	//	string szPatientPk = request.getParameter("patient_pk");
 /*
 		java.util.Date date = new java.util.Date();
 		SimpleDateFormat df = new SimpleDateFormat("YYYY-MM-dd");
@@ -68,7 +68,41 @@
 			szDateFrom = strSundayDate;
 	//		out.println(szDateFrom);
 
-		}else if (szDateType.equals("Custom")){
+		}else if (szDateType.equals("This Month")){
+			
+			java.util.Date date = new java.util.Date();
+			SimpleDateFormat df = new SimpleDateFormat("YYYY-MM-dd");
+			String strTodayDate = df.format(date);
+			szDateTo = strTodayDate;
+	//		out.println(szDateTo);
+
+			Calendar now = Calendar.getInstance();
+			int dayOfMonth = now.get(Calendar.DAY_OF_MONTH);
+			now.add (Calendar.DATE, -dayOfMonth);
+			java.util.Date aMonthAgoDate = now.getTime();
+			String straMonthAgoDate = df.format(aMonthAgoDate);
+			szDateFrom = straMonthAgoDate;
+	//		out.println(szDateFrom);
+
+		}//else if (szDateType.equals("This Year")){
+			
+		//	java.util.Date date = new java.util.Date();
+		//	SimpleDateFormat df = new SimpleDateFormat("YYYY-MM-dd");
+		//	String strTodayDate = df.format(date);
+		//	szDateTo = strTodayDate;
+	//		out.println(szDateTo);
+
+		//	Calendar now = Calendar.getInstance();
+		//	int weekOfDay = now.get(Calendar.DAY_OF_WEEK) - 1;
+		//	now.add (Calendar.DATE, -weekOfDay);
+		//	java.util.Date sundayDate = now.getTime();
+		//	String strSundayDate = df.format(sundayDate);
+		//	szDateFrom = strSundayDate;
+	//		out.println(szDateFrom);
+
+		//}
+		
+		else if (szDateType.equals("Custom")){
 
 	//		out.println(szDateFrom);
 	//		out.println(szDateTo);

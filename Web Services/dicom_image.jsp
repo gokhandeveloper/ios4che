@@ -5,9 +5,9 @@
 <%@ page import="org.json.simple.JSONArray" %>
 
 <%
-		final String DB_CONNECTIONSTRING = "jdbc:postgresql://localhost/pacsdb";
+		final String DB_CONNECTIONSTRING = "jdbc:postgresql://localhost/pacsdatabase";
 		final String DB_USERNAME = "postgres";
-		final String DB_PASSWORD = "password";
+		final String DB_PASSWORD = "1";
 
 		String studyUID;
 		String seriesUID;

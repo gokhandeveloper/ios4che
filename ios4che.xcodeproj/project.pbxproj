@@ -62,6 +62,9 @@
 		5526A7661A96537C00405DC2 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5526A7651A96537C00405DC2 /* Accelerate.framework */; };
 		55606C751AA18A8500863223 /* readme.md in Sources */ = {isa = PBXBuildFile; fileRef = 55606C731AA18A8500863223 /* readme.md */; };
 		55606C761AA18A8500863223 /* releaseNotes.ios4che in Resources */ = {isa = PBXBuildFile; fileRef = 55606C741AA18A8500863223 /* releaseNotes.ios4che */; };
+		55606C7B1AA1923300863223 /* dicom_image.jsp in Resources */ = {isa = PBXBuildFile; fileRef = 55606C781AA1923300863223 /* dicom_image.jsp */; };
+		55606C7C1AA1923300863223 /* login.jsp in Resources */ = {isa = PBXBuildFile; fileRef = 55606C791AA1923300863223 /* login.jsp */; };
+		55606C7D1AA1923300863223 /* patient_search.jsp in Resources */ = {isa = PBXBuildFile; fileRef = 55606C7A1AA1923300863223 /* patient_search.jsp */; };
 		55B516911A9F93F30044FA54 /* StudyViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 55B516901A9F93F30044FA54 /* StudyViewController.h */; };
 		55B516931A9F94000044FA54 /* StudyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B516921A9F94000044FA54 /* StudyViewController.m */; };
 		55B74BB71A9CDDE200A367A6 /* SettingsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 55B74BB51A9CDDE200A367A6 /* SettingsViewController.h */; };
@@ -245,6 +248,9 @@
 		5526A7651A96537C00405DC2 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		55606C731AA18A8500863223 /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = SOURCE_ROOT; };
 		55606C741AA18A8500863223 /* releaseNotes.ios4che */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = releaseNotes.ios4che; sourceTree = SOURCE_ROOT; };
+		55606C781AA1923300863223 /* dicom_image.jsp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.other; path = dicom_image.jsp; sourceTree = "<group>"; };
+		55606C791AA1923300863223 /* login.jsp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.other; path = login.jsp; sourceTree = "<group>"; };
+		55606C7A1AA1923300863223 /* patient_search.jsp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.other; path = patient_search.jsp; sourceTree = "<group>"; };
 		55B516901A9F93F30044FA54 /* StudyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudyViewController.h; sourceTree = "<group>"; };
 		55B516921A9F94000044FA54 /* StudyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudyViewController.m; sourceTree = "<group>"; };
 		55B74BB51A9CDDE200A367A6 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
@@ -571,6 +577,7 @@
 		52FB9A5C1A6C532700E71D16 /* ios4che */ = {
 			isa = PBXGroup;
 			children = (
+				55606C771AA1923300863223 /* Web Services */,
 				55606C731AA18A8500863223 /* readme.md */,
 				55606C741AA18A8500863223 /* releaseNotes.ios4che */,
 				521C7F511A89EF8800B8971A /* framework */,
@@ -638,6 +645,16 @@
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
+		};
+		55606C771AA1923300863223 /* Web Services */ = {
+			isa = PBXGroup;
+			children = (
+				55606C781AA1923300863223 /* dicom_image.jsp */,
+				55606C791AA1923300863223 /* login.jsp */,
+				55606C7A1AA1923300863223 /* patient_search.jsp */,
+			);
+			path = "Web Services";
+			sourceTree = SOURCE_ROOT;
 		};
 		55B7D8731A96114F00441C11 /* CLImageEditor-master */ = {
 			isa = PBXGroup;
@@ -1007,10 +1024,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				528649A91A8B7FAF009A77B1 /* IQKeyboardManager.bundle in Resources */,
+				55606C7C1AA1923300863223 /* login.jsp in Resources */,
 				55B7D9121A96114F00441C11 /* .gitignore in Resources */,
+				55606C7B1AA1923300863223 /* dicom_image.jsp in Resources */,
 				52FB9A691A6C532700E71D16 /* Main_iPhone.storyboard in Resources */,
 				55B7D9351A96114F00441C11 /* CLImageEditor.podspec in Resources */,
 				52051C911A78F9D60058DBB6 /* Main_iPad.storyboard in Resources */,
+				55606C7D1AA1923300863223 /* patient_search.jsp in Resources */,
 				55B7D9491A96114F00441C11 /* LICENSE in Resources */,
 				52FB9A6E1A6C532700E71D16 /* LaunchScreen.xib in Resources */,
 				55B7D9131A96114F00441C11 /* CLImageEditor.bundle in Resources */,
