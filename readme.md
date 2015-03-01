@@ -1,5 +1,7 @@
 ios4che - open source iOS viewer app implementation for DCM4CHE Wado Service
-
+<p>Read the licence
+https://github.com/gokhandilek/ios4che/blob/master/PACS/LICENCE
+</p>
 <h3>Requirements</h3>
 <ol>
 <li>DCM4CHEE-2.18.0-psql & postgresql database</li>
