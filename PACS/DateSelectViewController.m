@@ -110,18 +110,28 @@
     [cell addSubview:lblTitle];
     
     if ([[Global sharedGlobal].filterDateType isEqualToString:ANY_DATE] && (indexPath.row == 0)){
+        [Global sharedGlobal].strStartdDate = @"";
+        [Global sharedGlobal].strEndDate = @"";
         cell.backgroundColor = [UIColor grayColor];
     }
     if ([[Global sharedGlobal].filterDateType isEqualToString:TODAY] && (indexPath.row == 1)){
+        [Global sharedGlobal].strStartdDate = @"";
+        [Global sharedGlobal].strEndDate = @"";
         cell.backgroundColor = [UIColor grayColor];
     }
     if ([[Global sharedGlobal].filterDateType isEqualToString:THIS_WEEK] && (indexPath.row == 2)){
+        [Global sharedGlobal].strStartdDate = @"";
+        [Global sharedGlobal].strEndDate = @"";
         cell.backgroundColor = [UIColor grayColor];
     }
     if ([[Global sharedGlobal].filterDateType isEqualToString:THIS_MONTH] && (indexPath.row == 3)){
+        [Global sharedGlobal].strStartdDate = @"";
+        [Global sharedGlobal].strEndDate = @"";
         cell.backgroundColor = [UIColor grayColor];
     }
     if ([[Global sharedGlobal].filterDateType isEqualToString:THIS_YEAR] && (indexPath.row == 4)){
+        [Global sharedGlobal].strStartdDate = @"";
+        [Global sharedGlobal].strEndDate = @"";
         cell.backgroundColor = [UIColor grayColor];
     }
     if ([[Global sharedGlobal].filterDateType isEqualToString:CUSTOM] && (indexPath.row == 5)){
@@ -134,6 +144,9 @@
     
     if (indexPath.row == 0){
         [Global sharedGlobal].filterDateType = ANY_DATE;
+        CustomTextField *txtEnd = [[CustomTextField alloc] initWithFrame:CGRectMake(120, 100, 170, 30)];
+        txtEnd.text = [Global sharedGlobal].strStartdDate;
+        
     }else if (indexPath.row == 1){
         [Global sharedGlobal].filterDateType = TODAY;
     }else if (indexPath.row == 2){
