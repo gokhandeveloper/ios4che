@@ -94,13 +94,16 @@ self.tblStudies.dataSource = self;
 -(NSInteger) numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     
     return 1;
+    NSString *patientNam3e = [Global sharedGlobal].strPatientName;
+       NSLog(@"%@", patientNam3e);
 }
 
 -(NSInteger) collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 
 {
     return [[[Global sharedGlobal]arrDicomData] count];
-
+      NSString *patientNam3e = [Global sharedGlobal].strPatientName;
+  NSLog(@"%@", patientNam3e);
 
 }
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -137,7 +140,21 @@ self.tblStudies.dataSource = self;
     cell.backgroundView = [[UIImageView alloc] initWithImage:imgDicom.image];
    // cell.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@%@wado?requestType=WADO&studyUID=%@&seriesUID=%@&objectUID=%@",hyperText, wadoUrlKey, portNumberKey, seperator,  dictDicom[@"studyUID"],dictDicom[@"seriesUID"],dictDicom[@"objectUID"]]]]]];
     //  imgDicom.tag = 100;
-       
+    UILabel *patientLable = [[UILabel alloc] initWithFrame:CGRectMake(0, 20, 300, 30)];
+      [patientLable setTextColor:[UIColor greenColor]];
+    NSString *patientNam3e = [Global sharedGlobal].patientNameTobePassedToOtherViewers;
+    
+    [patientLable setText:[NSString stringWithFormat:@"Patient:Name:%@", patientNam3e]];
+  //  NSLog(@"%@", strPatientName);
+    [cell.contentView addSubview:patientLable];
+    
+    UILabel *patientIDLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 25, 300, 60)];
+    [patientIDLabel setTextColor:[UIColor greenColor]];
+    NSString *patientIDLabelonImages = [Global sharedGlobal].patientIDTobePassedToOtherViewers;
+    
+    [patientIDLabel setText:[NSString stringWithFormat:@"Patient ID:%@", patientIDLabelonImages]];
+    //  NSLog(@"%@", strPatientName);
+    [cell.contentView addSubview:patientIDLabel];
     
     cell.layer.shouldRasterize = YES;
     cell.layer.rasterizationScale = [UIScreen mainScreen].scale;
@@ -192,7 +209,7 @@ return cell;
     
 {
     
-    UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
+ //   UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
     
       [Global sharedGlobal]. imageNumber = (int) indexPath.row;
     

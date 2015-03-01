@@ -133,6 +133,7 @@
                              @"date_type": filterDateType,
                              @"study_pk": stIdNum
                              };
+       NSLog(@"%@", [[Global sharedGlobal] strPatientName]);
      
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
      
@@ -200,7 +201,7 @@
     m_arrPatientSortedByStudyPk = [m_arrPatient sortedArrayUsingDescriptors:sortDescriptors];
                                  
         NSString *strPatientName = [[m_arrPatientSortedByStudyPk[indexPath.row][@"patient_name"] componentsSeparatedByCharactersInSet:[[NSCharacterSet characterSetWithCharactersInString:@"ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"]  invertedSet]] componentsJoinedByString:@" "];
-        cell.textLabel.text = [NSString stringWithFormat:@"%@\n%@\n%@", strPatientName, m_arrPatientSortedByStudyPk[indexPath.row][@"study_datetime"], m_arrPatientSortedByStudyPk[indexPath.row] [@"study_mods"]];
+        cell.textLabel.text = [NSString stringWithFormat:@"%@\nStudy Date: %@\nModality: %@", strPatientName, m_arrPatientSortedByStudyPk[indexPath.row][@"study_datetime"], m_arrPatientSortedByStudyPk[indexPath.row] [@"study_mods"]];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     NSLog(@"can you hear me table view! Testing the console only");
@@ -226,6 +227,16 @@
     
     [Global sharedGlobal]. nStudyIDNum = [studyIDtoBePassed intValue];
     
+    NSString *patientNametoBePassed = [[m_arrPatientSortedByStudyPk[indexPath.row] [@"patient_name"]componentsSeparatedByCharactersInSet:[[NSCharacterSet characterSetWithCharactersInString:@"ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"] invertedSet]] componentsJoinedByString:@" "];
+//    
+   [Global sharedGlobal] . patientNameTobePassedToOtherViewers  =[NSString stringWithFormat:@"%@", patientNametoBePassed ];
+//    
+    NSString *patientIDtoBePassed = [[m_arrPatientSortedByStudyPk[indexPath.row] [@"patient_id"]componentsSeparatedByCharactersInSet:[[NSCharacterSet characterSetWithCharactersInString:@"ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"] invertedSet]] componentsJoinedByString:@" "];
+    //
+    [Global sharedGlobal] . patientIDTobePassedToOtherViewers  =[NSString stringWithFormat:@"%@", patientIDtoBePassed ];
+    //
+    
+
     DicomViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"StudyViewController"];
     [self.navigationController pushViewController:vc animated:YES];
 

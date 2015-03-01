@@ -17,6 +17,10 @@
 @property (nonatomic) NSString *strModality;
 @property (nonatomic) NSMutableArray *arrDicomData;
 @property (nonatomic) NSString *stIDNum;
+
+//filtering breaks if I passed the above parameters; that's why the properties had to be set
+@property (nonatomic) NSString *patientNameTobePassedToOtherViewers;
+@property (nonatomic) NSString *patientIDTobePassedToOtherViewers;
 @property (nonatomic) int nStudyIDNum;
 @property (nonatomic) int nDicomIndex;
 @property (nonatomic) int imageNumber;

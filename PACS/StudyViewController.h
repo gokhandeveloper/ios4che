@@ -10,5 +10,6 @@
 
 @interface StudyViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource>
 @property (weak, nonatomic)  IBOutlet UICollectionView* tblStudies;
-//@property (weak, nonatomic) IBOutlet UITableView *tblPatients;
+@property (weak, nonatomic) IBOutlet UILabel* patientName;
+
 @end

@@ -184,11 +184,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" dataMode="prototypes" id="kDv-zh-nuh">
-                                <rect key="frame" x="0.0" y="38" width="320" height="517"/>
+                                <rect key="frame" x="0.0" y="30" width="320" height="394"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XoC-K0-dql">
-                                    <size key="itemSize" width="200" height="200"/>
+                                    <size key="itemSize" width="300" height="300"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -221,31 +221,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2XG-dZ-af4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1615" y="-1163"/>
-        </scene>
-        <!--Dicom View Controller-->
-        <scene sceneID="yCJ-Iv-yS6">
-            <objects>
-                <viewController storyboardIdentifier="DicomViewController" id="h0F-Ub-dQ9" customClass="DicomViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="L01-M1-cx1">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="1j2-IU-Okh">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="517"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <connections>
-                        <outlet property="scrollView" destination="1j2-IU-Okh" id="fYb-3p-AdJ"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ubU-wQ-Rdu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2271" y="-1170"/>
+            <point key="canvasLocation" x="2417" y="-1186"/>
         </scene>
         <!--Edit image-->
         <scene sceneID="o1c-x3-egM">
@@ -310,7 +286,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pa3-MO-Y14" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3343" y="-1186"/>
+            <point key="canvasLocation" x="3212" y="-1186"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="Ul0-Nr-liI">
