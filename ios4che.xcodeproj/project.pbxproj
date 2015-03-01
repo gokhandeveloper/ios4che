@@ -252,7 +252,7 @@
 		55606C781AA1923300863223 /* dicom_image.jsp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.other; path = dicom_image.jsp; sourceTree = "<group>"; };
 		55606C791AA1923300863223 /* login.jsp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.other; path = login.jsp; sourceTree = "<group>"; };
 		55606C7A1AA1923300863223 /* patient_search.jsp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.other; path = patient_search.jsp; sourceTree = "<group>"; };
-		55606C7E1AA2FAEC00863223 /* LICENCE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENCE; path = PACS/LICENCE; sourceTree = "<group>"; };
+		55606C7E1AA2FAEC00863223 /* LICENCE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENCE; sourceTree = "<group>"; };
 		55B516901A9F93F30044FA54 /* StudyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudyViewController.h; sourceTree = "<group>"; };
 		55B516921A9F94000044FA54 /* StudyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudyViewController.m; sourceTree = "<group>"; };
 		55B74BB51A9CDDE200A367A6 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
@@ -561,7 +561,6 @@
 		52FB9A511A6C532700E71D16 = {
 			isa = PBXGroup;
 			children = (
-				55606C7E1AA2FAEC00863223 /* LICENCE */,
 				52FB9A5C1A6C532700E71D16 /* ios4che */,
 				52FB9A761A6C532800E71D16 /* ios4cheTests */,
 				52FB9A5B1A6C532700E71D16 /* Products */,
@@ -580,6 +579,7 @@
 		52FB9A5C1A6C532700E71D16 /* ios4che */ = {
 			isa = PBXGroup;
 			children = (
+				55606C7E1AA2FAEC00863223 /* LICENCE */,
 				55606C771AA1923300863223 /* Web Services */,
 				55606C731AA18A8500863223 /* readme.md */,
 				55606C741AA18A8500863223 /* releaseNotes.ios4che */,
