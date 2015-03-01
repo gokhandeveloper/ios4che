@@ -20,8 +20,11 @@
 //    // Do any additional setup after loading the view.
     self.tblStudies.delegate = self;
 self.tblStudies.dataSource = self;
- 
     
+   // NSString *patientNameAsTitle = self.title;
+    //self.title=nil;
+   self.title = [NSString stringWithFormat:@"%@", [Global sharedGlobal].patientNameTobePassedToOtherViewers];
+   // self.navigationItem.title = [NSString stringWithFormat:@"%@", [Global sharedGlobal].strPatientName];
 }
 
 
@@ -29,8 +32,8 @@ self.tblStudies.dataSource = self;
     
     [super viewWillAppear:animated];
     
- [self.navigationController setNavigationBarHidden:YES];
-    
+ [self.navigationController setNavigationBarHidden:NO];
+  
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
@@ -74,19 +77,11 @@ self.tblStudies.dataSource = self;
         NSLog(@"Error: %@", error);
     }];
     
-
+  
 //
 }
 
 
-//- (void) viewWillAppear:(BOOL)animated{
-//    
-//    [super viewWillAppear:animated];
-//   
-//    [self.navigationController setNavigationBarHidden:NO];
-//    
-//    
-//}
 
 #pragma collection view methods
 
@@ -94,16 +89,14 @@ self.tblStudies.dataSource = self;
 -(NSInteger) numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     
     return 1;
-    NSString *patientNam3e = [Global sharedGlobal].strPatientName;
-       NSLog(@"%@", patientNam3e);
 }
 
 -(NSInteger) collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 
 {
     return [[[Global sharedGlobal]arrDicomData] count];
-      NSString *patientNam3e = [Global sharedGlobal].strPatientName;
-  NSLog(@"%@", patientNam3e);
+    
+
 
 }
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -140,21 +133,39 @@ self.tblStudies.dataSource = self;
     cell.backgroundView = [[UIImageView alloc] initWithImage:imgDicom.image];
    // cell.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@%@wado?requestType=WADO&studyUID=%@&seriesUID=%@&objectUID=%@",hyperText, wadoUrlKey, portNumberKey, seperator,  dictDicom[@"studyUID"],dictDicom[@"seriesUID"],dictDicom[@"objectUID"]]]]]];
     //  imgDicom.tag = 100;
-    UILabel *patientLable = [[UILabel alloc] initWithFrame:CGRectMake(0, 20, 300, 30)];
-      [patientLable setTextColor:[UIColor greenColor]];
-    NSString *patientNam3e = [Global sharedGlobal].patientNameTobePassedToOtherViewers;
-    
-    [patientLable setText:[NSString stringWithFormat:@"Patient:Name:%@", patientNam3e]];
+        UILabel *patientLable = [[UILabel alloc] initWithFrame:CGRectMake(0, 20, 300, 30)];
+    [patientLable setTextColor:[UIColor greenColor]];
+        NSString *patientName = [Global sharedGlobal].patientNameTobePassedToOtherViewers;
+    [patientLable setText:[NSString stringWithFormat:@"Patient Name:%@", patientName]];
   //  NSLog(@"%@", strPatientName);
-    [cell.contentView addSubview:patientLable];
+        [cell.contentView addSubview:patientLable];
     
-    UILabel *patientIDLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 25, 300, 60)];
+        UILabel *patientIDLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 25, 300, 60)];
     [patientIDLabel setTextColor:[UIColor greenColor]];
-    NSString *patientIDLabelonImages = [Global sharedGlobal].patientIDTobePassedToOtherViewers;
-    
+        NSString *patientIDLabelonImages = [Global sharedGlobal].patientIDTobePassedToOtherViewers;
     [patientIDLabel setText:[NSString stringWithFormat:@"Patient ID:%@", patientIDLabelonImages]];
     //  NSLog(@"%@", strPatientName);
-    [cell.contentView addSubview:patientIDLabel];
+        [cell.contentView addSubview:patientIDLabel];
+    
+    
+    
+        UILabel *patientDobLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 45, 300, 60)];
+    [patientDobLabel setTextColor:[UIColor greenColor]];
+        NSString *patientDobLabelOnImages = [Global sharedGlobal].patientDobTobePassedToOtherViewers;
+    [patientDobLabel setText:[NSString stringWithFormat:@"DOB:%@", patientDobLabelOnImages]];
+    
+    [cell.contentView addSubview:patientDobLabel];
+    
+    if(![[Global sharedGlobal].patientSexTobePassedToOtherViewers isEqual:[NSNull null]])
+    {
+    UILabel *patientSexLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 75, 300, 60)];
+    [patientSexLabel setTextColor:[UIColor greenColor]];
+    NSString *patientSexLabelOnImages = [Global sharedGlobal].patientSexTobePassedToOtherViewers;
+    [patientDobLabel setText:[NSString stringWithFormat:@"Sex:%@", patientSexLabelOnImages]];
+    
+    [cell.contentView addSubview:patientSexLabel];
+    
+    }
     
     cell.layer.shouldRasterize = YES;
     cell.layer.rasterizationScale = [UIScreen mainScreen].scale;

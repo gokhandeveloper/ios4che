@@ -231,11 +231,23 @@
 //    
    [Global sharedGlobal] . patientNameTobePassedToOtherViewers  =[NSString stringWithFormat:@"%@", patientNametoBePassed ];
 //    
-    NSString *patientIDtoBePassed = [[m_arrPatientSortedByStudyPk[indexPath.row] [@"patient_id"]componentsSeparatedByCharactersInSet:[[NSCharacterSet characterSetWithCharactersInString:@"ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"] invertedSet]] componentsJoinedByString:@" "];
+    NSString *patientIDtoBePassed = [[m_arrPatientSortedByStudyPk[indexPath.row] [@"patient_id"]componentsSeparatedByCharactersInSet:[[NSCharacterSet characterSetWithCharactersInString:@"ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"] invertedSet]] componentsJoinedByString:@""];
     //
-    [Global sharedGlobal] . patientIDTobePassedToOtherViewers  =[NSString stringWithFormat:@"%@", patientIDtoBePassed ];
+    [Global sharedGlobal] . patientIDTobePassedToOtherViewers  =[NSString stringWithFormat:@"%@", patientIDtoBePassed];
     //
+ NSString *patientDobtoBePassed = [[m_arrPatientSortedByStudyPk[indexPath.row] [@"date_of_birth"] componentsSeparatedByCharactersInSet:[[NSCharacterSet characterSetWithCharactersInString:@"ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"] invertedSet]] componentsJoinedByString:@""];
+//    //
+ [Global sharedGlobal] . patientDobTobePassedToOtherViewers  =[NSString stringWithFormat:@"%@", patientDobtoBePassed ];
+//    //
     
+    if (![m_arrPatientSortedByStudyPk[indexPath.row][@"patient_sex"] isEqual:[NSNull null]])
+        
+    {
+    NSString *patientSextoBePassed = [[m_arrPatientSortedByStudyPk[indexPath.row] [@"patient_sex"]componentsSeparatedByCharactersInSet:[[NSCharacterSet characterSetWithCharactersInString:@"ABCDEFGHIJKLMNOPQRSTUVWXYZqazwsxedcrfvtgbyhnujmik "] invertedSet]] componentsJoinedByString:@""];
+    //
+    [Global sharedGlobal] . patientSexTobePassedToOtherViewers  =[NSString stringWithFormat:@"%@", patientSextoBePassed ];
+    //
+    }
 
     DicomViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"StudyViewController"];
     [self.navigationController pushViewController:vc animated:YES];

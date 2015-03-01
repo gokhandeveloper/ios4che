@@ -21,6 +21,9 @@
 //filtering breaks if I passed the above parameters; that's why the properties had to be set
 @property (nonatomic) NSString *patientNameTobePassedToOtherViewers;
 @property (nonatomic) NSString *patientIDTobePassedToOtherViewers;
+@property (nonatomic) NSString *patientDobTobePassedToOtherViewers;
+@property (nonatomic) NSString *patientSexTobePassedToOtherViewers;
+@property (nonatomic) NSString *patientAccessionNumberTobePassedToOtherViewers;
 @property (nonatomic) int nStudyIDNum;
 @property (nonatomic) int nDicomIndex;
 @property (nonatomic) int imageNumber;

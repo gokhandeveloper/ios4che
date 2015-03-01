@@ -14,7 +14,6 @@
 		5242A1561A8C53E30013119D /* ModalityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5242A1551A8C53E30013119D /* ModalityViewController.m */; };
 		5242A15B1A8C5C7A0013119D /* DateSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5242A15A1A8C5C7A0013119D /* DateSelectViewController.m */; };
 		524F3E501A89973800FC12E7 /* DicomShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 524F3E4F1A89973800FC12E7 /* DicomShowViewController.m */; };
-		524F3E531A89998E00FC12E7 /* DicomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 524F3E521A89998E00FC12E7 /* DicomViewController.m */; };
 		524F3E571A89A02300FC12E7 /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 524F3E561A89A02300FC12E7 /* AsyncImageView.m */; };
 		5286497A1A8B7C60009A77B1 /* DatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 528649791A8B7C60009A77B1 /* DatePickerViewController.m */; };
 		5286499E1A8B7FAF009A77B1 /* IQNSArray+Sort.m in Sources */ = {isa = PBXBuildFile; fileRef = 528649801A8B7FAF009A77B1 /* IQNSArray+Sort.m */; };
@@ -156,8 +155,6 @@
 		5242A15A1A8C5C7A0013119D /* DateSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateSelectViewController.m; sourceTree = "<group>"; };
 		524F3E4E1A89973800FC12E7 /* DicomShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DicomShowViewController.h; sourceTree = "<group>"; };
 		524F3E4F1A89973800FC12E7 /* DicomShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DicomShowViewController.m; sourceTree = "<group>"; };
-		524F3E511A89998E00FC12E7 /* DicomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DicomViewController.h; sourceTree = "<group>"; };
-		524F3E521A89998E00FC12E7 /* DicomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DicomViewController.m; sourceTree = "<group>"; };
 		524F3E551A89A02300FC12E7 /* AsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncImageView.h; sourceTree = "<group>"; };
 		524F3E561A89A02300FC12E7 /* AsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncImageView.m; sourceTree = "<group>"; };
 		528649781A8B7C60009A77B1 /* DatePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatePickerViewController.h; sourceTree = "<group>"; };
@@ -601,8 +598,6 @@
 				528649791A8B7C60009A77B1 /* DatePickerViewController.m */,
 				5242A1541A8C53E30013119D /* ModalityViewController.h */,
 				5242A1551A8C53E30013119D /* ModalityViewController.m */,
-				524F3E511A89998E00FC12E7 /* DicomViewController.h */,
-				524F3E521A89998E00FC12E7 /* DicomViewController.m */,
 				524F3E4E1A89973800FC12E7 /* DicomShowViewController.h */,
 				524F3E4F1A89973800FC12E7 /* DicomShowViewController.m */,
 				55B516901A9F93F30044FA54 /* StudyViewController.h */,
@@ -1104,7 +1099,6 @@
 				528649A21A8B7FAF009A77B1 /* IQKeyboardReturnKeyHandler.m in Sources */,
 				529AF0FB1A7286F20077DF37 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				529AF0F51A7286F20077DF37 /* AFSecurityPolicy.m in Sources */,
-				524F3E531A89998E00FC12E7 /* DicomViewController.m in Sources */,
 				52051C941A78FE5A0058DBB6 /* MainViewController.m in Sources */,
 				528649A31A8B7FAF009A77B1 /* IQSegmentedNextPrevious.m in Sources */,
 				52051C9A1A7907380058DBB6 /* Global.m in Sources */,
