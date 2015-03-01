@@ -6,6 +6,7 @@ https://github.com/gokhandilek/ios4che/blob/master/PACS/LICENCE
 <ol>
 <li>DCM4CHEE-2.18.0-psql & postgresql database</li>
 <li>Web services</li>
+<li>Json Simple library: Copy this library to dcm4che-2.18.0-psql/server/default/lib folder and restart dcm4chee. Download it from: https://code.google.com/p/json-simple/downloads/detail?name=json-simple-1.1.1.jar&can=2&q= </li>
 </ol>
 
 
