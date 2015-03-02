@@ -65,6 +65,7 @@
 		55606C7C1AA1923300863223 /* login.jsp in Resources */ = {isa = PBXBuildFile; fileRef = 55606C791AA1923300863223 /* login.jsp */; };
 		55606C7D1AA1923300863223 /* patient_search.jsp in Resources */ = {isa = PBXBuildFile; fileRef = 55606C7A1AA1923300863223 /* patient_search.jsp */; };
 		55606C811AA3011F00863223 /* LICENCE in Resources */ = {isa = PBXBuildFile; fileRef = 55606C801AA3011F00863223 /* LICENCE */; };
+		55606C831AA453FD00863223 /* json-simple-1.1.1.jar in Frameworks */ = {isa = PBXBuildFile; fileRef = 55606C821AA453FD00863223 /* json-simple-1.1.1.jar */; };
 		55B516911A9F93F30044FA54 /* StudyViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 55B516901A9F93F30044FA54 /* StudyViewController.h */; };
 		55B516931A9F94000044FA54 /* StudyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B516921A9F94000044FA54 /* StudyViewController.m */; };
 		55B74BB71A9CDDE200A367A6 /* SettingsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 55B74BB51A9CDDE200A367A6 /* SettingsViewController.h */; };
@@ -250,6 +251,7 @@
 		55606C791AA1923300863223 /* login.jsp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.other; path = login.jsp; sourceTree = "<group>"; };
 		55606C7A1AA1923300863223 /* patient_search.jsp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.other; path = patient_search.jsp; sourceTree = "<group>"; };
 		55606C801AA3011F00863223 /* LICENCE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENCE; sourceTree = "<group>"; };
+		55606C821AA453FD00863223 /* json-simple-1.1.1.jar */ = {isa = PBXFileReference; lastKnownFileType = archive.jar; path = "json-simple-1.1.1.jar"; sourceTree = SOURCE_ROOT; };
 		55B516901A9F93F30044FA54 /* StudyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudyViewController.h; sourceTree = "<group>"; };
 		55B516921A9F94000044FA54 /* StudyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudyViewController.m; sourceTree = "<group>"; };
 		55B74BB51A9CDDE200A367A6 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
@@ -356,6 +358,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5526A7661A96537C00405DC2 /* Accelerate.framework in Frameworks */,
+				55606C831AA453FD00863223 /* json-simple-1.1.1.jar in Frameworks */,
 				5526A7631A9640FE00405DC2 /* CoreGraphics.framework in Frameworks */,
 				5526A7641A9640FE00405DC2 /* CoreImage.framework in Frameworks */,
 				5526A7601A963D9400405DC2 /* Accounts.framework in Frameworks */,
@@ -647,6 +650,7 @@
 		55606C771AA1923300863223 /* Web Services */ = {
 			isa = PBXGroup;
 			children = (
+				55606C821AA453FD00863223 /* json-simple-1.1.1.jar */,
 				55606C781AA1923300863223 /* dicom_image.jsp */,
 				55606C791AA1923300863223 /* login.jsp */,
 				55606C7A1AA1923300863223 /* patient_search.jsp */,

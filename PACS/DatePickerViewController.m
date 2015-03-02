@@ -31,15 +31,15 @@
 - (IBAction)DoneAction:(id)sender {
     
     NSDate *dateFromPicker = [self.datePicker date];
-    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier: NSGregorianCalendar];
-    unsigned unitFlags = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit;
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier: NSCalendarIdentifierGregorian];
+    unsigned unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay;
     NSDateComponents *components = [calendar components: unitFlags fromDate: dateFromPicker];
     int year = (int)[components year];
     int month = (int)[components month];
     int day = (int)[components day];
     
     if ([Global sharedGlobal].isFromStartDatePickerToDateSelect){
-        [Global sharedGlobal].strStartdDate = [NSString stringWithFormat:@"%d-%d-%d",year,month,day+1];
+        [Global sharedGlobal].strStartdDate = [NSString stringWithFormat:@"%d-%d-%d",year,month,day];
     }
     if ([Global sharedGlobal].isFromEndDatePickerToDateSelect){
         [Global sharedGlobal].strEndDate = [NSString stringWithFormat:@"%d-%d-%d",year,month,day+1];

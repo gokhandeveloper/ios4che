@@ -16,7 +16,10 @@
 		String szDateTo = request.getParameter("date_to");
 		String szDateType  = request.getParameter("date_type");
 		String szModality = request.getParameter("modality");
+		String szPatientDob = request.getParameter("date_of_birth");
+		String szPatientSex = request.getParameter("patient_sex");
 	//	string szPatientPk = request.getParameter("patient_pk");
+	
 /*
 		java.util.Date date = new java.util.Date();
 		SimpleDateFormat df = new SimpleDateFormat("YYYY-MM-dd");
@@ -36,71 +39,21 @@
 	if (szDateType != null){
 		if (szDateType.equals("Today")){
 
-			java.util.Date date = new java.util.Date();
-			SimpleDateFormat df = new SimpleDateFormat("YYYY-MM-dd");
-			String todayDate = df.format(date);
-	//		out.println(todayDate);
-			szDateFrom = todayDate;
- 
-			Calendar cal = Calendar.getInstance();
-			cal.setTime (date);
-			cal.add (Calendar.DATE, 1);
-			java.util.Date tomorrowDate = cal.getTime();
 		
-			String strTomorrowDate = df.format(tomorrowDate);
-			szDateTo = strTomorrowDate;
-	//		out.println(strTomorrowDate);
 
 
 		}else if (szDateType.equals("This Week")){
 			
-			java.util.Date date = new java.util.Date();
-			SimpleDateFormat df = new SimpleDateFormat("YYYY-MM-dd");
-			String strTodayDate = df.format(date);
-			szDateTo = strTodayDate;
-	//		out.println(szDateTo);
-
-			Calendar now = Calendar.getInstance();
-			int weekOfDay = now.get(Calendar.DAY_OF_WEEK) - 1;
-			now.add (Calendar.DATE, -weekOfDay);
-			java.util.Date sundayDate = now.getTime();
-			String strSundayDate = df.format(sundayDate);
-			szDateFrom = strSundayDate;
-	//		out.println(szDateFrom);
+		
 
 		}else if (szDateType.equals("This Month")){
 			
-			java.util.Date date = new java.util.Date();
-			SimpleDateFormat df = new SimpleDateFormat("YYYY-MM-dd");
-			String strTodayDate = df.format(date);
-			szDateTo = strTodayDate;
-	//		out.println(szDateTo);
+		
 
-			Calendar now = Calendar.getInstance();
-			int dayOfMonth = now.get(Calendar.DAY_OF_MONTH);
-			now.add (Calendar.DATE, -dayOfMonth);
-			java.util.Date aMonthAgoDate = now.getTime();
-			String straMonthAgoDate = df.format(aMonthAgoDate);
-			szDateFrom = straMonthAgoDate;
-	//		out.println(szDateFrom);
-
-		}//else if (szDateType.equals("This Year")){
+		}else if (szDateType.equals("This Year")){
 			
-		//	java.util.Date date = new java.util.Date();
-		//	SimpleDateFormat df = new SimpleDateFormat("YYYY-MM-dd");
-		//	String strTodayDate = df.format(date);
-		//	szDateTo = strTodayDate;
-	//		out.println(szDateTo);
-
-		//	Calendar now = Calendar.getInstance();
-		//	int weekOfDay = now.get(Calendar.DAY_OF_WEEK) - 1;
-		//	now.add (Calendar.DATE, -weekOfDay);
-		//	java.util.Date sundayDate = now.getTime();
-		//	String strSundayDate = df.format(sundayDate);
-		//	szDateFrom = strSundayDate;
-	//		out.println(szDateFrom);
-
-		//}
+	
+		}
 		
 		else if (szDateType.equals("Custom")){
 
@@ -118,9 +71,9 @@
 	}
 
 
-		Connection conn;
+		Connection connn;
 		ResultSet rs;
-		String szQuery = "SELECT patient.pk as patient_pk, patient.pat_id as patient_id, patient.pat_name as patient_name, study.pk as study_pk, study.mods_in_study as study_mods, study.study_datetime as study_datetime FROM patient, study";
+		String szQuery = "SELECT patient.pk as patient_pk, patient.pat_id as patient_id, patient.pat_name as patient_name, patient.pat_birthdate as date_of_birth, patient.pat_sex as patient_sex, study.pk as study_pk, study.mods_in_study as study_mods, study.study_datetime as study_datetime FROM patient, study";
 
 		String szQueryWhere = "";
 
@@ -129,6 +82,12 @@
 		}
 		if (szPatientName != null && szPatientName.length() > 0){
 			szQueryWhere = szQueryWhere + "patient.pat_name like '%" + szPatientName + "%' and ";
+		}
+		if (szPatientDob != null && szPatientDob.length() > 0){
+			szQueryWhere = szQueryWhere + "patient.pat_birthdate = '" + szPatientDob + "' and ";
+		}
+		if (szPatientSex != null && szPatientSex.length() > 0){
+			szQueryWhere = szQueryWhere + "patient.pat_sex = '" + szPatientSex + "' and ";
 		}
 		if (szModality != null && szModality.length() > 0){
 			szQueryWhere = szQueryWhere + "study.mods_in_study = '" + szModality + "' and ";
@@ -147,9 +106,9 @@
 		szQuery = szQuery + szQueryWhere;
 
 
-		conn = DriverManager.getConnection(DB_CONNECTIONSTRING, DB_USERNAME, DB_PASSWORD);
+		connn = DriverManager.getConnection(DB_CONNECTIONSTRING, DB_USERNAME, DB_PASSWORD);
 
-		Statement st = conn.createStatement();
+		Statement st = connn.createStatement();
 		rs = st.executeQuery(szQuery);
 
 		String szPk = "";
@@ -163,9 +122,12 @@
 				item.put("patient_pk", rs.getString("patient_pk"));
 				item.put("patient_id", rs.getString("patient_id"));
 				item.put("patient_name", rs.getString("patient_name"));
+				item.put("date_of_birth", rs.getString("date_of_birth"));
+				item.put("patient_sex", rs.getString("patient_sex"));
 				item.put("study_pk", rs.getString("study_pk"));
 				item.put("study_mods", rs.getString("study_mods"));
 				item.put("study_datetime", rs.getString("study_datetime"));
+				
 			}
 			catch (Exception exception){
 			}
