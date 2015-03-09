@@ -174,6 +174,9 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    NSLog(@"%@", [Global sharedGlobal].strStartdDate);
+    NSLog(@"%@", [Global sharedGlobal].strEndDate);
+    NSLog(@"%lu", (unsigned long)m_arrPatient.count);
     return [m_arrPatient count];
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{

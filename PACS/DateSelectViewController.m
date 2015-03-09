@@ -37,6 +37,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    NSLog(@"%d", m_arrSelection.count );
     return [m_arrSelection count];
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -60,7 +61,7 @@
         
         if (indexPath.row == 5){
             
-            
+
             UILabel *lblStartDate = [[UILabel alloc] initWithFrame:CGRectMake(50, 60, 70, 30)];
             lblStartDate.text = @"From :";
             CustomTextField *txtStart = [[CustomTextField alloc] initWithFrame:CGRectMake(120, 60, 170, 30)];
@@ -70,8 +71,8 @@
             [cell addSubview:lblStartDate];
             [cell addSubview:txtStart];
 
-            NSLog(@"%@",[Global sharedGlobal].strStartdDate);
-            txtStart.text = [Global sharedGlobal].strStartdDate;
+           NSLog(@"%@",[Global sharedGlobal].strStartdDate);
+           txtStart.text = [Global sharedGlobal].strStartdDate;
             [Global sharedGlobal].isFromStartDatePickerToDateSelect = NO;
             
 //            if ([Global sharedGlobal].isFromStartDatePickerToDateSelect){
@@ -83,12 +84,12 @@
             lblEndDate.text = @"To :";
             CustomTextField *txtEnd = [[CustomTextField alloc] initWithFrame:CGRectMake(120, 100, 170, 30)];
             txtEnd.borderStyle = UITextBorderStyleRoundedRect;
-            txtEnd.delegate = self;
+           txtEnd.delegate = self;
             txtEnd.tag = 22;
-            [cell addSubview:lblEndDate];
-            [cell addSubview:txtEnd];
+           [cell addSubview:lblEndDate];
+           [cell addSubview:txtEnd];
             
-            txtEnd.text = [Global sharedGlobal].strEndDate;
+           txtEnd.text = [Global sharedGlobal].strEndDate;
             [Global sharedGlobal].isFromEndDatePickerToDateSelect = NO;
             
 //            if ([Global sharedGlobal].isFromEndDatePickerToDateSelect){
@@ -110,117 +111,132 @@
     [cell addSubview:lblTitle];
     
     if ([[Global sharedGlobal].filterDateType isEqualToString:ANY_DATE] && (indexPath.row == 0)){
-        [Global sharedGlobal].strStartdDate = @"";
-        [Global sharedGlobal].strEndDate = @"";
+     
         cell.backgroundColor = [UIColor grayColor];
-        
+       
         
         
         
     }
     if ([[Global sharedGlobal].filterDateType isEqualToString:TODAY] && (indexPath.row == 1)){
-        [Global sharedGlobal].strStartdDate = @"";
-        [Global sharedGlobal].strEndDate = @"";
+      
         cell.backgroundColor = [UIColor grayColor];
-        
+      
       
         
         
     }
     if ([[Global sharedGlobal].filterDateType isEqualToString:THIS_WEEK] && (indexPath.row == 2)){
-        [Global sharedGlobal].strStartdDate = @"";
-        [Global sharedGlobal].strEndDate = @"";
+     
         cell.backgroundColor = [UIColor grayColor];
-        
+   
         
         
         
     }
     if ([[Global sharedGlobal].filterDateType isEqualToString:THIS_MONTH] && (indexPath.row == 3)){
-        [Global sharedGlobal].strStartdDate = @"";
-        [Global sharedGlobal].strEndDate = @"";
+     
         cell.backgroundColor = [UIColor grayColor];
-//        
-//        NSString *currentDateToBeFormatted = [dateFormat stringFromDate:today];
-//        NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier: NSCalendarIdentifierGregorian];
-//        unsigned unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay;
-//        NSDateComponents *components = [calendar components: unitFlags fromDate:[dateFormat dateFromString:currentDateToBeFormatted]];
-//        [components setDay:1];
-//        currentDateToBeFormatted = [calendar dateFromComponents:components];
-//        currentDateToBeFormatted = [Global sharedGlobal].strStartdDate;
-//        
-//        
-//        NSString *currentDateToBeFormattedForToday = [dateFormat stringFromDate:today];
-//        unsigned unitFlagsForToday = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay;
-//        NSDateComponents *componentsForToday = [calendar components: unitFlagsForToday fromDate:[dateFormat dateFromString:currentDateToBeFormattedForToday]];
-//       int year = (int)[componentsForToday year];
-//      int month = (int)[componentsForToday month];
-//      int day = (int)[componentsForToday day];
-//       [Global sharedGlobal].strEndDate = [NSString stringWithFormat:@"%d-%d-%d",year,month,day+1];
-//        NSLog(@"%@", currentDateToBeFormatted);
-//        NSLog(@"%@", today);
+      
       
  }
-    
     
  
 
     if ([[Global sharedGlobal].filterDateType isEqualToString:THIS_YEAR] && (indexPath.row == 4)){
-        [Global sharedGlobal].strStartdDate = @"";
-        [Global sharedGlobal].strEndDate = @"";
-        cell.backgroundColor = [UIColor grayColor];
-        
        
+        cell.backgroundColor = [UIColor grayColor];
         
     }
     if ([[Global sharedGlobal].filterDateType isEqualToString:CUSTOM] && (indexPath.row == 5)){
         cell.backgroundColor = [UIColor grayColor];
+      
     }
     
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSDate *today = [NSDate date];
-    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:@"YYYY-MM-dd"];
-
+   
     if (indexPath.row == 0){
         [Global sharedGlobal].filterDateType = ANY_DATE;
+        
         CustomTextField *txtEnd = [[CustomTextField alloc] initWithFrame:CGRectMake(120, 100, 170, 30)];
         txtEnd.text = [Global sharedGlobal].strStartdDate;
         
     }else if (indexPath.row == 1){
         [Global sharedGlobal].filterDateType = TODAY;
+
+        NSDate *today = [NSDate date];
+        NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+        [dateFormat setDateFormat:@"YYYY-MM-dd"];
+
         NSString *dateString = [dateFormat stringFromDate:today];
         NSLog(@"date: %@", dateString);
-        dateString = [Global sharedGlobal].strStartdDate;
+      [Global sharedGlobal].strStartdDate =dateString;
         
         NSDate *todayAgagin = [NSDate date];
         NSString *dateStringAgain = [dateFormat stringFromDate:todayAgagin];
         NSLog(@"date: %@", dateStringAgain);
-        dateStringAgain = [Global sharedGlobal].strEndDate;
+        [Global sharedGlobal].strEndDate = dateStringAgain;
         
         
     }else if (indexPath.row == 2){
-        [Global sharedGlobal].filterDateType = THIS_WEEK;
+         [Global sharedGlobal].filterDateType = THIS_WEEK;
+         NSLog(@"%d",(int)indexPath.row);
+        [Global sharedGlobal].strStartdDate = @"";
+        [Global sharedGlobal].strEndDate = @"";
+        NSDate *dateFromFilteringForThisWeek= [NSDate date];
+        NSLog(@"%@", dateFromFilteringForThisWeek);
+        NSCalendar* calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+        
+        NSDateComponents* components = [calendar components:NSCalendarUnitWeekday | NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay fromDate:dateFromFilteringForThisWeek];
+        NSDateComponents* componentsForEndDayOfTheCurrentWeek = [calendar components:NSWeekdayCalendarUnit | NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit fromDate:dateFromFilteringForThisWeek];
+        
+        [components setDay:([components day] - ([components weekday]-1))];
+        [componentsForEndDayOfTheCurrentWeek setDay:([components day] + (7 - [components weekday]))];
+        [componentsForEndDayOfTheCurrentWeek setHour:23];
+        [componentsForEndDayOfTheCurrentWeek setMinute:59];
+        [componentsForEndDayOfTheCurrentWeek setSecond:59];
+        int yearForThisWeek = (int) [components year];
+        int monthForThisWeek = (int) [components month];
+        int dayStartFromForThisWeek = (int) [components day];
+        int dateEndForThisWeek = (int) [componentsForEndDayOfTheCurrentWeek day];
+        
+        NSLog(@"%d", dayStartFromForThisWeek);
+        
+        
+        [Global sharedGlobal].strStartdDate = [NSString stringWithFormat:@"%d-%d-%d",yearForThisWeek,monthForThisWeek,dayStartFromForThisWeek];
+        [Global sharedGlobal].strEndDate = [NSString stringWithFormat:@"%d-%d-%d",yearForThisWeek,monthForThisWeek,dateEndForThisWeek];
+        NSLog(@"%@", [Global sharedGlobal].strStartdDate);
+        NSLog(@"%@", [Global sharedGlobal].strEndDate);
+
+        
     }else if (indexPath.row == 3){
         [Global sharedGlobal].filterDateType = THIS_MONTH;
-        
+        [Global sharedGlobal].strStartdDate = @"";
+        [Global sharedGlobal].strEndDate = @"";
         NSDate *dateFromFilteringForThisMonth = [NSDate date];
         NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier: NSCalendarIdentifierGregorian];
         unsigned unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay;
         NSDateComponents *components = [calendar components: unitFlags fromDate: dateFromFilteringForThisMonth];
         int yearForThisMonth = (int)[components year];
         int monthForThisMonth = (int)[components month];
-        int dayForThisMonth = (int)[components day];
-        int dayStartFromForThisMonth = 1;
-        [Global sharedGlobal].strStartdDate = [NSString stringWithFormat:@"%d-%d-%d",yearForThisMonth,monthForThisMonth,dayStartFromForThisMonth];
-        [Global sharedGlobal].strEndDate = [NSString stringWithFormat:@"%d-%d-%d",yearForThisMonth,monthForThisMonth,dayForThisMonth+2];
-        NSLog(@"%@", [Global sharedGlobal].strStartdDate);
-        NSLog(@"%@", [Global sharedGlobal].strEndDate);
+        int dayStartFromForThisMonth = 01;
+        NSCalendar *cal = [NSCalendar currentCalendar];
+        NSRange rng = [cal rangeOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitMonth forDate:[NSDate date]];
+       NSUInteger numberOfDaysInMonth = rng.length;
+      
+        [Global sharedGlobal].strStartdDate =[ NSString stringWithFormat:@"%d-%d-%d",yearForThisMonth,monthForThisMonth,dayStartFromForThisMonth];
+        [Global sharedGlobal].strEndDate = [NSString stringWithFormat:@"%d-%d-%lu",yearForThisMonth,monthForThisMonth,numberOfDaysInMonth];
+        
+            NSLog(@"%@", [Global sharedGlobal].strStartdDate);
+            NSLog(@"%@", [Global sharedGlobal].strEndDate);
+        
+        
     }else if (indexPath.row == 4){
         [Global sharedGlobal].filterDateType = THIS_YEAR;
-        
+        [Global sharedGlobal].strStartdDate = @"";
+        [Global sharedGlobal].strEndDate = @"";
         NSDate *dateFromFiltering = [NSDate date];
         NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier: NSCalendarIdentifierGregorian];
         unsigned unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay;
@@ -228,12 +244,12 @@
         int year = (int)[components year];
         int month = (int)[components month];
         int day = (int)[components day];
-        int monthStartFrom = 0;
+        int monthStartFrom = 1;
         int dayStartFrom = 1;
         [Global sharedGlobal].strStartdDate = [NSString stringWithFormat:@"%d-%d-%d",year,monthStartFrom,dayStartFrom];
         
         
-        [Global sharedGlobal].strEndDate = [NSString stringWithFormat:@"%d-%d-%d",year,month,day+1];
+        [Global sharedGlobal].strEndDate = [NSString stringWithFormat:@"%d-%d-%d",year,month,day];
         NSLog(@"%@", [Global sharedGlobal].strStartdDate);
         NSLog(@"%@", [Global sharedGlobal].strEndDate);
         
@@ -241,6 +257,10 @@
     }
     else{
         [Global sharedGlobal].filterDateType = CUSTOM;
+        [Global sharedGlobal].strStartdDate = @"";
+      [Global sharedGlobal].strEndDate = @"";
+        NSLog(@"%@", [Global sharedGlobal].strStartdDate);
+        NSLog(@"%@", [Global sharedGlobal].strEndDate);
     }
     
     [tableView reloadData];
@@ -269,6 +289,9 @@
 {
     return NO;
 }
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

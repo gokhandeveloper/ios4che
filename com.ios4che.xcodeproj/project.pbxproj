@@ -987,7 +987,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0610;
-				ORGANIZATIONNAME = "Gokhan Dilek";
+				ORGANIZATIONNAME = "Gokhan DIlek";
 				TargetAttributes = {
 					52FB9A591A6C532700E71D16 = {
 						CreatedOnToolsVersion = 6.1;
@@ -1000,7 +1000,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 52FB9A551A6C532700E71D16 /* Build configuration list for PBXProject "ios4che" */;
+			buildConfigurationList = 52FB9A551A6C532700E71D16 /* Build configuration list for PBXProject "com.ios4che" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -1387,7 +1387,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		52FB9A551A6C532700E71D16 /* Build configuration list for PBXProject "ios4che" */ = {
+		52FB9A551A6C532700E71D16 /* Build configuration list for PBXProject "com.ios4che" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				52FB9A7B1A6C532800E71D16 /* Debug */,

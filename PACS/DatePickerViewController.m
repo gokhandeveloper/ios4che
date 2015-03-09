@@ -42,10 +42,8 @@
         [Global sharedGlobal].strStartdDate = [NSString stringWithFormat:@"%d-%d-%d",year,month,day];
     }
     if ([Global sharedGlobal].isFromEndDatePickerToDateSelect){
-        [Global sharedGlobal].strEndDate = [NSString stringWithFormat:@"%d-%d-%d",year,month,day+1];
+        [Global sharedGlobal].strEndDate = [NSString stringWithFormat:@"%d-%d-%d",year,month,day];
     }
-    
-//    [Global sharedGlobal].strStartdDate = [NSString stringWithFormat:@"%d-%d-%d",year,month,day+1];
     
     [self.navigationController popViewControllerAnimated:YES];
     
