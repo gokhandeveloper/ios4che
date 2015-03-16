@@ -39,19 +39,20 @@
     [self.navigationController setNavigationBarHidden:YES];
     
     if (![[NSUserDefaults standardUserDefaults] boolForKey:ISLOGGED_IN]){
+        
         LoginViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
         [self presentViewController:vc animated:YES completion:nil];
     }
    
-   
-     if (![[NSUserDefaults standardUserDefaults] boolForKey:FIRST_TIME]){
+    if (![[NSUserDefaults standardUserDefaults] boolForKey:FIRST_TIME]){
         
-    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:FIRST_TIME];
-    
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:FIRST_TIME];
         UIAlertView * alert =[[UIAlertView alloc ] initWithTitle:nil message:@"This app cannot be used for diagnosis" delegate:self cancelButtonTitle:@"OK, I understand" otherButtonTitles: nil];
-    [   alert show];
-    
+        [alert show];
+        
+        
     }
+    
 }
 
 - (void) viewDidAppear:(BOOL)animated{
@@ -61,7 +62,8 @@
     
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
-  
+ 
+
     NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
    NSString *wadoUrlKey = nil;
    NSString *webServiceDirectoryKey = nil;
