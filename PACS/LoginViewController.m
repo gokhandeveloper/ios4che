@@ -50,11 +50,42 @@
     return NO;
 }
 
+- (void) viewDidAppear:(BOOL)animated{
+    
+    
+    
+}
+
+
 - (IBAction)loginAction:(id)sender {
 
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager.reachabilityManager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        switch (status)   {
+            case AFNetworkReachabilityStatusReachableViaWWAN:
+            {
+                NSLog(@"AFNetworkReachabilityStatusReachableViaWWAN");
+            }
+                
+            case AFNetworkReachabilityStatusReachableViaWiFi:
+            {
+                
+                [self loginAction:(id)sender];
+                
+                break;
+            }
+            case AFNetworkReachabilityStatusNotReachable:
+            {
+                NSLog(@"AFNetworkReachabilityStatusNotReachable");// do whatever we wish when network is available
+                break;
+            }
+            default:              // do whatever we wish when network is not available
+                break;
+        }
+    }];
+    
     NSDictionary *params = @{@"username": self.txtUsername.text,
                              @"password": self.txtPassword.text};
     

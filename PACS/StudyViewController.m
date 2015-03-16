@@ -123,24 +123,24 @@ self.tblStudies.dataSource = self;
     
     
     
-   // UIImageView *imgDicom = (UIImageView *)[cell viewWithTag:1000];
+  //  UIImageView *imgDicom = (UIImageView *)[cell viewWithTag:1000];
    // NSDictionary *dictDicom = [Global sharedGlobal].arrDicomData[indexPath.row];
     
-        AsyncImageView *imgDicom = [[AsyncImageView alloc] initWithImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@%@wado?requestType=WADO&studyUID=%@&seriesUID=%@&objectUID=%@",hyperText, wadoUrlKey, portNumberKey, seperator,  [Global sharedGlobal].arrDicomData[indexPath.row] [@"studyUID"],[Global sharedGlobal].arrDicomData[indexPath.row][@"seriesUID"],[Global sharedGlobal].arrDicomData[indexPath.row][@"objectUID"]]]]]];
-//    imgDicom.imageURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@%@wado?requestType=WADO&studyUID=%@&seriesUID=%@&objectUID=%@",hyperText, wadoUrlKey, portNumberKey, seperator, [Global sharedGlobal].arrDicomData[indexPath.row] [@"studyUID"],[Global sharedGlobal].arrDicomData[indexPath.row][@"seriesUID"],[Global sharedGlobal].arrDicomData[indexPath.row][@"objectUID"]]];
+       AsyncImageView *imgDicom = [[AsyncImageView alloc] initWithImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@%@wado?requestType=WADO&studyUID=%@&seriesUID=%@&objectUID=%@",hyperText, wadoUrlKey, portNumberKey, seperator,  [Global sharedGlobal].arrDicomData[indexPath.row] [@"studyUID"],[Global sharedGlobal].arrDicomData[indexPath.row][@"seriesUID"],[Global sharedGlobal].arrDicomData[indexPath.row][@"objectUID"]]]]]];
+   // imgDicom.imageURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@%@wado?requestType=WADO&studyUID=%@&seriesUID=%@&objectUID=%@",hyperText, wadoUrlKey, portNumberKey, seperator, [Global sharedGlobal].arrDicomData[indexPath.row] [@"studyUID"],[Global sharedGlobal].arrDicomData[indexPath.row][@"seriesUID"],[Global sharedGlobal].arrDicomData[indexPath.row][@"objectUID"]]];
     
     
     cell.backgroundView = [[UIImageView alloc] initWithImage:imgDicom.image];
-   // cell.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@%@wado?requestType=WADO&studyUID=%@&seriesUID=%@&objectUID=%@",hyperText, wadoUrlKey, portNumberKey, seperator,  dictDicom[@"studyUID"],dictDicom[@"seriesUID"],dictDicom[@"objectUID"]]]]]];
+  // cell.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@%@wado?requestType=WADO&studyUID=%@&seriesUID=%@&objectUID=%@",hyperText, wadoUrlKey, portNumberKey, seperator,  imgDicom[@"studyUID"],imgDicom[@"seriesUID"],imgDicom[@"objectUID"]]]]]];
     //  imgDicom.tag = 100;
-        UILabel *patientLable = [[UILabel alloc] initWithFrame:CGRectMake(0, 20, 300, 30)];
+        UILabel *patientLable = [[UILabel alloc] initWithFrame:CGRectMake(22, 20, 400, 30)];
     [patientLable setTextColor:[UIColor greenColor]];
         NSString *patientName = [Global sharedGlobal].patientNameTobePassedToOtherViewers;
     [patientLable setText:[NSString stringWithFormat:@"Patient Name:%@", patientName]];
   //  NSLog(@"%@", strPatientName);
         [cell.contentView addSubview:patientLable];
     
-        UILabel *patientIDLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 25, 300, 60)];
+        UILabel *patientIDLabel = [[UILabel alloc] initWithFrame:CGRectMake(22, 25, 400, 60)];
     [patientIDLabel setTextColor:[UIColor greenColor]];
         NSString *patientIDLabelonImages = [Global sharedGlobal].patientIDTobePassedToOtherViewers;
     [patientIDLabel setText:[NSString stringWithFormat:@"Patient ID:%@", patientIDLabelonImages]];
@@ -149,7 +149,7 @@ self.tblStudies.dataSource = self;
     
     
     
-        UILabel *patientDobLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 45, 300, 60)];
+        UILabel *patientDobLabel = [[UILabel alloc] initWithFrame:CGRectMake(22, 45, 400, 90)];
     [patientDobLabel setTextColor:[UIColor greenColor]];
         NSString *patientDobLabelOnImages = [Global sharedGlobal].patientDobTobePassedToOtherViewers;
     [patientDobLabel setText:[NSString stringWithFormat:@"DOB:%@", patientDobLabelOnImages]];
@@ -158,7 +158,7 @@ self.tblStudies.dataSource = self;
     
     if(![[Global sharedGlobal].patientSexTobePassedToOtherViewers isEqual:[NSNull null]])
     {
-    UILabel *patientSexLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 75, 300, 60)];
+    UILabel *patientSexLabel = [[UILabel alloc] initWithFrame:CGRectMake(22, 75, 300, 60)];
     [patientSexLabel setTextColor:[UIColor greenColor]];
     NSString *patientSexLabelOnImages = [Global sharedGlobal].patientSexTobePassedToOtherViewers;
     [patientDobLabel setText:[NSString stringWithFormat:@"Sex:%@", patientSexLabelOnImages]];

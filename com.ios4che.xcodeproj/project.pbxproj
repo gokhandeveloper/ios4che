@@ -129,7 +129,9 @@
 		761089361AB3B3F200EEC70D /* com.m in Sources */ = {isa = PBXBuildFile; fileRef = 761089341AB3B3F200EEC70D /* com.m */; };
 		761089371AB3B4C900EEC70D /* Global.m in Sources */ = {isa = PBXBuildFile; fileRef = 52051C991A7907380058DBB6 /* Global.m */; };
 		7610893D1AB3B7C500EEC70D /* PatientTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7610893C1AB3B7C500EEC70D /* PatientTableViewController.swift */; };
-		76BED3241AB52DDF00DC2016 /* universal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76BED3231AB52DDF00DC2016 /* universal.storyboard */; };
+		769C86CA1AB6EA9A00B7D595 /* save.png in Resources */ = {isa = PBXBuildFile; fileRef = 769C86C91AB6EA9A00B7D595 /* save.png */; };
+		769C86CC1AB6F11200B7D595 /* eye45.png in Resources */ = {isa = PBXBuildFile; fileRef = 769C86CB1AB6F11200B7D595 /* eye45.png */; };
+		769C86CD1AB7033300B7D595 /* universal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 769C86CF1AB7033300B7D595 /* universal.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -400,7 +402,9 @@
 		761089331AB3B3F200EEC70D /* com.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = com.h; sourceTree = "<group>"; };
 		761089341AB3B3F200EEC70D /* com.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = com.m; sourceTree = "<group>"; };
 		7610893C1AB3B7C500EEC70D /* PatientTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PatientTableViewController.swift; path = ../PatientTableViewController.swift; sourceTree = "<group>"; };
-		76BED3231AB52DDF00DC2016 /* universal.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = universal.storyboard; sourceTree = "<group>"; };
+		769C86C91AB6EA9A00B7D595 /* save.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = save.png; sourceTree = "<group>"; };
+		769C86CB1AB6F11200B7D595 /* eye45.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eye45.png; sourceTree = "<group>"; };
+		769C86CE1AB7033300B7D595 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/universal.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -643,6 +647,7 @@
 		52FB9A5C1A6C532700E71D16 /* ios4che */ = {
 			isa = PBXGroup;
 			children = (
+				769C86C81AB6EA8800B7D595 /* Assets */,
 				55606C801AA3011F00863223 /* LICENCE */,
 				55606C771AA1923300863223 /* Web Services */,
 				55606C731AA18A8500863223 /* readme.md */,
@@ -675,7 +680,7 @@
 				55B74BB51A9CDDE200A367A6 /* SettingsViewController.h */,
 				55B74BB61A9CDDE200A367A6 /* SettingsViewController.m */,
 				52FB9A671A6C532700E71D16 /* Main_iPhone.storyboard */,
-				76BED3231AB52DDF00DC2016 /* universal.storyboard */,
+				769C86CF1AB7033300B7D595 /* universal.storyboard */,
 				52FB9A6A1A6C532700E71D16 /* Images.xcassets */,
 				52FB9A6C1A6C532700E71D16 /* LaunchScreen.xib */,
 				52FB9A5D1A6C532700E71D16 /* Supporting Files */,
@@ -1032,6 +1037,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		769C86C81AB6EA8800B7D595 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				769C86C91AB6EA9A00B7D595 /* save.png */,
+				769C86CB1AB6F11200B7D595 /* eye45.png */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1144,6 +1158,7 @@
 					};
 					7610891D1AB3B3D400EEC70D = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = MSKZZDWRJQ;
 					};
 				};
 			};
@@ -1176,15 +1191,17 @@
 			files = (
 				528649A91A8B7FAF009A77B1 /* IQKeyboardManager.bundle in Resources */,
 				55606C7C1AA1923300863223 /* login.jsp in Resources */,
-				76BED3241AB52DDF00DC2016 /* universal.storyboard in Resources */,
+				769C86CD1AB7033300B7D595 /* universal.storyboard in Resources */,
 				55B7D9121A96114F00441C11 /* .gitignore in Resources */,
 				55606C7B1AA1923300863223 /* dicom_image.jsp in Resources */,
 				52FB9A691A6C532700E71D16 /* Main_iPhone.storyboard in Resources */,
 				55B7D9351A96114F00441C11 /* CLImageEditor.podspec in Resources */,
 				55606C7D1AA1923300863223 /* patient_search.jsp in Resources */,
+				769C86CC1AB6F11200B7D595 /* eye45.png in Resources */,
 				55606C811AA3011F00863223 /* LICENCE in Resources */,
 				55B7D9491A96114F00441C11 /* LICENSE in Resources */,
 				52FB9A6E1A6C532700E71D16 /* LaunchScreen.xib in Resources */,
+				769C86CA1AB6EA9A00B7D595 /* save.png in Resources */,
 				55B7D9131A96114F00441C11 /* CLImageEditor.bundle in Resources */,
 				52FB9A6B1A6C532700E71D16 /* Images.xcassets in Resources */,
 				55606C761AA18A8500863223 /* releaseNotes.ios4che in Resources */,
@@ -1380,6 +1397,14 @@
 			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
+		769C86CF1AB7033300B7D595 /* universal.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				769C86CE1AB7033300B7D595 /* en */,
+			);
+			name = universal.storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -1489,7 +1514,7 @@
 					"PACS/framework/Source/**",
 				);
 				INFOPLIST_FILE = PACS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1520,7 +1545,7 @@
 					"PACS/framework/Source/**",
 				);
 				INFOPLIST_FILE = PACS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1575,6 +1600,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1585,6 +1612,7 @@
 				INFOPLIST_FILE = "PACS WatchKit App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
 				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
@@ -1595,6 +1623,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1602,6 +1632,7 @@
 				INFOPLIST_FILE = "PACS WatchKit App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
 				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
@@ -1623,6 +1654,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -1640,6 +1672,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
