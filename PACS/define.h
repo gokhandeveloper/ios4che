@@ -9,6 +9,7 @@
 #ifndef PACS_define_h
 #define PACS_define_h
 
+#define FIRST_TIME @"firstTime"
 #define ISLOGGED_IN @"isloggedin"
 #define DicomRowCount 3
 

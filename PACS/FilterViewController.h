@@ -21,6 +21,7 @@
 
 @property (weak, nonatomic) IBOutlet CustomTextField *txtModality;
 
+- (IBAction)rightButtonHandler:(id)sender;
 
 
 

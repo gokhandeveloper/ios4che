@@ -132,6 +132,8 @@
 		769C86CA1AB6EA9A00B7D595 /* save.png in Resources */ = {isa = PBXBuildFile; fileRef = 769C86C91AB6EA9A00B7D595 /* save.png */; };
 		769C86CC1AB6F11200B7D595 /* eye45.png in Resources */ = {isa = PBXBuildFile; fileRef = 769C86CB1AB6F11200B7D595 /* eye45.png */; };
 		769C86CD1AB7033300B7D595 /* universal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 769C86CF1AB7033300B7D595 /* universal.storyboard */; };
+		769C86D21AB708CF00B7D595 /* UITabBarControllerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 769C86D01AB708CF00B7D595 /* UITabBarControllerViewController.h */; };
+		769C86D31AB708CF00B7D595 /* UITabBarControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 769C86D11AB708CF00B7D595 /* UITabBarControllerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -405,6 +407,8 @@
 		769C86C91AB6EA9A00B7D595 /* save.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = save.png; sourceTree = "<group>"; };
 		769C86CB1AB6F11200B7D595 /* eye45.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eye45.png; sourceTree = "<group>"; };
 		769C86CE1AB7033300B7D595 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/universal.storyboard; sourceTree = "<group>"; };
+		769C86D01AB708CF00B7D595 /* UITabBarControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITabBarControllerViewController.h; sourceTree = "<group>"; };
+		769C86D11AB708CF00B7D595 /* UITabBarControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITabBarControllerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -681,6 +685,8 @@
 				55B74BB61A9CDDE200A367A6 /* SettingsViewController.m */,
 				52FB9A671A6C532700E71D16 /* Main_iPhone.storyboard */,
 				769C86CF1AB7033300B7D595 /* universal.storyboard */,
+				769C86D01AB708CF00B7D595 /* UITabBarControllerViewController.h */,
+				769C86D11AB708CF00B7D595 /* UITabBarControllerViewController.m */,
 				52FB9A6A1A6C532700E71D16 /* Images.xcassets */,
 				52FB9A6C1A6C532700E71D16 /* LaunchScreen.xib */,
 				52FB9A5D1A6C532700E71D16 /* Supporting Files */,
@@ -1054,6 +1060,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				761089351AB3B3F200EEC70D /* com.h in Headers */,
+				769C86D21AB708CF00B7D595 /* UITabBarControllerViewController.h in Headers */,
 				55B74BB71A9CDDE200A367A6 /* SettingsViewController.h in Headers */,
 				55B516911A9F93F30044FA54 /* StudyViewController.h in Headers */,
 			);
@@ -1246,6 +1253,7 @@
 				55B74BB81A9CDDE200A367A6 /* SettingsViewController.m in Sources */,
 				55B7D9221A96114F00441C11 /* CLEffectBase.m in Sources */,
 				55B7D9231A96114F00441C11 /* CLEffectTool.m in Sources */,
+				769C86D31AB708CF00B7D595 /* UITabBarControllerViewController.m in Sources */,
 				524F3E571A89A02300FC12E7 /* AsyncImageView.m in Sources */,
 				55B7D9161A96114F00441C11 /* CLImageToolInfo.m in Sources */,
 				529AF0FE1A7286F20077DF37 /* UIImageView+AFNetworking.m in Sources */,

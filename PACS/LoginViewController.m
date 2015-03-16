@@ -62,29 +62,6 @@
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    [manager.reachabilityManager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
-        switch (status)   {
-            case AFNetworkReachabilityStatusReachableViaWWAN:
-            {
-                NSLog(@"AFNetworkReachabilityStatusReachableViaWWAN");
-            }
-                
-            case AFNetworkReachabilityStatusReachableViaWiFi:
-            {
-                
-                [self loginAction:(id)sender];
-                
-                break;
-            }
-            case AFNetworkReachabilityStatusNotReachable:
-            {
-                NSLog(@"AFNetworkReachabilityStatusNotReachable");// do whatever we wish when network is available
-                break;
-            }
-            default:              // do whatever we wish when network is not available
-                break;
-        }
-    }];
     
     NSDictionary *params = @{@"username": self.txtUsername.text,
                              @"password": self.txtPassword.text};
@@ -157,7 +134,33 @@
     
     NSArray *loginUrlParts = [[NSArray alloc] initWithObjects: http, wadoUrl, portNumber, seperator, webServiceDirectory, loginWebService ,nil];
     NSString *loginUrl = [loginUrlParts componentsJoinedByString:@""];
+    
     [manager GET:loginUrl  parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [manager.reachabilityManager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+            switch (status)   {
+                case AFNetworkReachabilityStatusReachableViaWWAN:
+                {
+                    NSLog(@"AFNetworkReachabilityStatusReachableViaWWAN");
+                }
+                    
+                case AFNetworkReachabilityStatusReachableViaWiFi:
+                {
+                    
+                    [self loginAction:(id)sender];
+                    
+                    break;
+                }
+                case AFNetworkReachabilityStatusNotReachable:
+                {
+                    NSLog(@"AFNetworkReachabilityStatusNotReachable");// do whatever we wish when network is available
+                    break;
+                }
+                default:              // do whatever we wish when network is not available
+                    break;
+            }
+        }];
+
+        
         [MBProgressHUD hideHUDForView:self.view animated:YES];
         //get server response
         NSString *strResponse = [[[operation responseString] componentsSeparatedByCharactersInSet:[[NSCharacterSet characterSetWithCharactersInString:@"01"] invertedSet]] componentsJoinedByString:@""];

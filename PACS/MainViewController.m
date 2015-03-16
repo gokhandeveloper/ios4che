@@ -29,7 +29,7 @@
     self.tblPatients.dataSource = self;
     
     m_arrPatient = [[NSMutableArray alloc] init];
-  
+    
 }
 
 - (void) viewWillAppear:(BOOL)animated{
@@ -42,7 +42,16 @@
         LoginViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
         [self presentViewController:vc animated:YES completion:nil];
     }
+   
+   
+     if (![[NSUserDefaults standardUserDefaults] boolForKey:FIRST_TIME]){
+        
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:FIRST_TIME];
     
+        UIAlertView * alert =[[UIAlertView alloc ] initWithTitle:nil message:@"This app cannot be used for diagnosis" delegate:self cancelButtonTitle:@"OK, I understand" otherButtonTitles: nil];
+    [   alert show];
+    
+    }
 }
 
 - (void) viewDidAppear:(BOOL)animated{

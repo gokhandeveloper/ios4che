@@ -10,6 +10,7 @@
 #import "Global.h"
 #import "define.h"
 #import "CustomTextField.h"
+#import "MainViewController.h"
 #import "ModalityViewController.h"
 #import "DateSelectViewController.h"
 
@@ -32,11 +33,13 @@
     
     [self.navigationController setNavigationBarHidden:NO];
     
-    UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:self action:@selector(leftButtonHandler:)];
+    UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithTitle:@"<" style: UIBarButtonItemStyleDone target:self action:@selector(leftButtonHandler:)];
     self.navigationItem.leftBarButtonItem = leftButton;
     
-    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"Filter" style:UIBarButtonItemStyleDone target:self action:@selector(rightButtonHandler:)];
+  UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"Filter" style:UIBarButtonItemStyleDone target:self action:@selector(rightButtonHandler:) ];
     self.navigationItem.rightBarButtonItem = rightButton;
+    
+  
     
     self.txtDate.delegate = self;
     self.txtModality.delegate = self;
@@ -95,6 +98,8 @@
     }
     
     [self.navigationController popViewControllerAnimated:YES];
+    MainViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"MainViewController"];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void) TapEvent:(int) tag{
@@ -112,10 +117,13 @@
 
 }
 
+
+
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
 {
     return NO;
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
