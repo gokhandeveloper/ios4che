@@ -94,6 +94,7 @@
         
         activityView.excludedActivityTypes = excludedActivityTypes;
         activityView.completionHandler = ^(NSString *activityType, BOOL completed){
+            
             if(completed && [activityType isEqualToString:UIActivityTypeSaveToCameraRoll]){
                 UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Saved successfully" message:nil delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
                 [alert show];

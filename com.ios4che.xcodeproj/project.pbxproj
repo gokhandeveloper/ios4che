@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		52051C911A78F9D60058DBB6 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52051C901A78F9D60058DBB6 /* Main_iPad.storyboard */; };
 		52051C941A78FE5A0058DBB6 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52051C931A78FE5A0058DBB6 /* MainViewController.m */; };
 		52051C971A78FF5F0058DBB6 /* FilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52051C961A78FF5F0058DBB6 /* FilterViewController.m */; };
 		52051C9A1A7907380058DBB6 /* Global.m in Sources */ = {isa = PBXBuildFile; fileRef = 52051C991A7907380058DBB6 /* Global.m */; };
@@ -118,6 +117,19 @@
 		55B7D9521A96114F00441C11 /* CLTextLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B7D90C1A96114F00441C11 /* CLTextLabel.m */; };
 		55B7D9531A96114F00441C11 /* CLTextSettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B7D90E1A96114F00441C11 /* CLTextSettingView.m */; };
 		55B7D9541A96114F00441C11 /* CLTextTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B7D9101A96114F00441C11 /* CLTextTool.m */; };
+		761089151AB3B3D400EEC70D /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761089141AB3B3D400EEC70D /* InterfaceController.swift */; };
+		761089171AB3B3D400EEC70D /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761089161AB3B3D400EEC70D /* NotificationController.swift */; };
+		761089191AB3B3D400EEC70D /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761089181AB3B3D400EEC70D /* GlanceController.swift */; };
+		7610891B1AB3B3D400EEC70D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7610891A1AB3B3D400EEC70D /* Images.xcassets */; };
+		7610891F1AB3B3D500EEC70D /* PACS WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 7610891E1AB3B3D400EEC70D /* PACS WatchKit App.app */; };
+		761089271AB3B3D500EEC70D /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 761089251AB3B3D500EEC70D /* Interface.storyboard */; };
+		761089291AB3B3D500EEC70D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 761089281AB3B3D500EEC70D /* Images.xcassets */; };
+		7610892C1AB3B3D500EEC70D /* PACS WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7610890F1AB3B3D400EEC70D /* PACS WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		761089351AB3B3F200EEC70D /* com.h in Headers */ = {isa = PBXBuildFile; fileRef = 761089331AB3B3F200EEC70D /* com.h */; };
+		761089361AB3B3F200EEC70D /* com.m in Sources */ = {isa = PBXBuildFile; fileRef = 761089341AB3B3F200EEC70D /* com.m */; };
+		761089371AB3B4C900EEC70D /* Global.m in Sources */ = {isa = PBXBuildFile; fileRef = 52051C991A7907380058DBB6 /* Global.m */; };
+		7610893D1AB3B7C500EEC70D /* PatientTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7610893C1AB3B7C500EEC70D /* PatientTableViewController.swift */; };
+		76BED3241AB52DDF00DC2016 /* universal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76BED3231AB52DDF00DC2016 /* universal.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +139,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 52FB9A591A6C532700E71D16;
 			remoteInfo = PACS;
+		};
+		761089201AB3B3D500EEC70D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52FB9A521A6C532700E71D16 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7610891D1AB3B3D400EEC70D;
+			remoteInfo = "PACS WatchKit App";
+		};
+		7610892A1AB3B3D500EEC70D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52FB9A521A6C532700E71D16 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7610890E1AB3B3D400EEC70D;
+			remoteInfo = "PACS WatchKit Extension";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -140,10 +166,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		766943341AB3802F00BA37D0 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				7610892C1AB3B3D500EEC70D /* PACS WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		52051C901A78F9D60058DBB6 /* Main_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPad.storyboard; sourceTree = "<group>"; };
 		52051C921A78FE5A0058DBB6 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		52051C931A78FE5A0058DBB6 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		52051C951A78FF5F0058DBB6 /* FilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterViewController.h; sourceTree = "<group>"; };
@@ -350,6 +386,21 @@
 		55B7D90E1A96114F00441C11 /* CLTextSettingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLTextSettingView.m; sourceTree = "<group>"; };
 		55B7D90F1A96114F00441C11 /* CLTextTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLTextTool.h; sourceTree = "<group>"; };
 		55B7D9101A96114F00441C11 /* CLTextTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLTextTool.m; sourceTree = "<group>"; };
+		7610890F1AB3B3D400EEC70D /* PACS WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "PACS WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		761089121AB3B3D400EEC70D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		761089131AB3B3D400EEC70D /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		761089141AB3B3D400EEC70D /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		761089161AB3B3D400EEC70D /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		761089181AB3B3D400EEC70D /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
+		7610891A1AB3B3D400EEC70D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		7610891E1AB3B3D400EEC70D /* PACS WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PACS WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		761089241AB3B3D500EEC70D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		761089261AB3B3D500EEC70D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		761089281AB3B3D500EEC70D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		761089331AB3B3F200EEC70D /* com.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = com.h; sourceTree = "<group>"; };
+		761089341AB3B3F200EEC70D /* com.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = com.m; sourceTree = "<group>"; };
+		7610893C1AB3B7C500EEC70D /* PatientTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PatientTableViewController.swift; path = ../PatientTableViewController.swift; sourceTree = "<group>"; };
+		76BED3231AB52DDF00DC2016 /* universal.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = universal.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -367,6 +418,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		52FB9A701A6C532800E71D16 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7610890C1AB3B3D400EEC70D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -561,8 +619,12 @@
 		52FB9A511A6C532700E71D16 = {
 			isa = PBXGroup;
 			children = (
+				761089331AB3B3F200EEC70D /* com.h */,
+				761089341AB3B3F200EEC70D /* com.m */,
 				52FB9A5C1A6C532700E71D16 /* ios4che */,
 				52FB9A761A6C532800E71D16 /* ios4cheTests */,
+				761089101AB3B3D400EEC70D /* PACS WatchKit Extension */,
+				761089221AB3B3D500EEC70D /* PACS WatchKit App */,
 				52FB9A5B1A6C532700E71D16 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -572,6 +634,8 @@
 			children = (
 				52FB9A5A1A6C532700E71D16 /* PACS.app */,
 				52FB9A731A6C532800E71D16 /* PACSTests.xctest */,
+				7610890F1AB3B3D400EEC70D /* PACS WatchKit Extension.appex */,
+				7610891E1AB3B3D400EEC70D /* PACS WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -611,7 +675,7 @@
 				55B74BB51A9CDDE200A367A6 /* SettingsViewController.h */,
 				55B74BB61A9CDDE200A367A6 /* SettingsViewController.m */,
 				52FB9A671A6C532700E71D16 /* Main_iPhone.storyboard */,
-				52051C901A78F9D60058DBB6 /* Main_iPad.storyboard */,
+				76BED3231AB52DDF00DC2016 /* universal.storyboard */,
 				52FB9A6A1A6C532700E71D16 /* Images.xcassets */,
 				52FB9A6C1A6C532700E71D16 /* LaunchScreen.xib */,
 				52FB9A5D1A6C532700E71D16 /* Supporting Files */,
@@ -928,6 +992,46 @@
 			path = CLTextTool;
 			sourceTree = "<group>";
 		};
+		761089101AB3B3D400EEC70D /* PACS WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				761089141AB3B3D400EEC70D /* InterfaceController.swift */,
+				761089161AB3B3D400EEC70D /* NotificationController.swift */,
+				761089181AB3B3D400EEC70D /* GlanceController.swift */,
+				7610893C1AB3B7C500EEC70D /* PatientTableViewController.swift */,
+				7610891A1AB3B3D400EEC70D /* Images.xcassets */,
+				761089111AB3B3D400EEC70D /* Supporting Files */,
+			);
+			path = "PACS WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		761089111AB3B3D400EEC70D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				761089121AB3B3D400EEC70D /* Info.plist */,
+				761089131AB3B3D400EEC70D /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		761089221AB3B3D500EEC70D /* PACS WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				761089251AB3B3D500EEC70D /* Interface.storyboard */,
+				761089281AB3B3D500EEC70D /* Images.xcassets */,
+				761089231AB3B3D500EEC70D /* Supporting Files */,
+			);
+			path = "PACS WatchKit App";
+			sourceTree = "<group>";
+		};
+		761089231AB3B3D500EEC70D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				761089241AB3B3D500EEC70D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -935,6 +1039,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				761089351AB3B3F200EEC70D /* com.h in Headers */,
 				55B74BB71A9CDDE200A367A6 /* SettingsViewController.h in Headers */,
 				55B516911A9F93F30044FA54 /* StudyViewController.h in Headers */,
 			);
@@ -952,10 +1057,12 @@
 				52FB9A581A6C532700E71D16 /* Resources */,
 				55B7D9821A96208B00441C11 /* Headers */,
 				55B7D9831A9620C700441C11 /* CopyFiles */,
+				766943341AB3802F00BA37D0 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				7610892B1AB3B3D500EEC70D /* PBXTargetDependency */,
 			);
 			name = PACS;
 			productName = PACS;
@@ -980,13 +1087,46 @@
 			productReference = 52FB9A731A6C532800E71D16 /* PACSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		7610890E1AB3B3D400EEC70D /* PACS WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 761089301AB3B3D500EEC70D /* Build configuration list for PBXNativeTarget "PACS WatchKit Extension" */;
+			buildPhases = (
+				7610890B1AB3B3D400EEC70D /* Sources */,
+				7610890C1AB3B3D400EEC70D /* Frameworks */,
+				7610890D1AB3B3D400EEC70D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				761089211AB3B3D500EEC70D /* PBXTargetDependency */,
+			);
+			name = "PACS WatchKit Extension";
+			productName = "PACS WatchKit Extension";
+			productReference = 7610890F1AB3B3D400EEC70D /* PACS WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		7610891D1AB3B3D400EEC70D /* PACS WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7610892D1AB3B3D500EEC70D /* Build configuration list for PBXNativeTarget "PACS WatchKit App" */;
+			buildPhases = (
+				7610891C1AB3B3D400EEC70D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PACS WatchKit App";
+			productName = "PACS WatchKit App";
+			productReference = 7610891E1AB3B3D400EEC70D /* PACS WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		52FB9A521A6C532700E71D16 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Gokhan DIlek";
 				TargetAttributes = {
 					52FB9A591A6C532700E71D16 = {
@@ -997,6 +1137,13 @@
 						CreatedOnToolsVersion = 6.1;
 						DevelopmentTeam = MSKZZDWRJQ;
 						TestTargetID = 52FB9A591A6C532700E71D16;
+					};
+					7610890E1AB3B3D400EEC70D = {
+						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = MSKZZDWRJQ;
+					};
+					7610891D1AB3B3D400EEC70D = {
+						CreatedOnToolsVersion = 6.3;
 					};
 				};
 			};
@@ -1016,6 +1163,8 @@
 			targets = (
 				52FB9A591A6C532700E71D16 /* PACS */,
 				52FB9A721A6C532800E71D16 /* PACSTests */,
+				7610890E1AB3B3D400EEC70D /* PACS WatchKit Extension */,
+				7610891D1AB3B3D400EEC70D /* PACS WatchKit App */,
 			);
 		};
 /* End PBXProject section */
@@ -1027,11 +1176,11 @@
 			files = (
 				528649A91A8B7FAF009A77B1 /* IQKeyboardManager.bundle in Resources */,
 				55606C7C1AA1923300863223 /* login.jsp in Resources */,
+				76BED3241AB52DDF00DC2016 /* universal.storyboard in Resources */,
 				55B7D9121A96114F00441C11 /* .gitignore in Resources */,
 				55606C7B1AA1923300863223 /* dicom_image.jsp in Resources */,
 				52FB9A691A6C532700E71D16 /* Main_iPhone.storyboard in Resources */,
 				55B7D9351A96114F00441C11 /* CLImageEditor.podspec in Resources */,
-				52051C911A78F9D60058DBB6 /* Main_iPad.storyboard in Resources */,
 				55606C7D1AA1923300863223 /* patient_search.jsp in Resources */,
 				55606C811AA3011F00863223 /* LICENCE in Resources */,
 				55B7D9491A96114F00441C11 /* LICENSE in Resources */,
@@ -1046,6 +1195,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7610890D1AB3B3D400EEC70D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7610891B1AB3B3D400EEC70D /* Images.xcassets in Resources */,
+				7610891F1AB3B3D500EEC70D /* PACS WatchKit App.app in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7610891C1AB3B3D400EEC70D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				761089271AB3B3D500EEC70D /* Interface.storyboard in Resources */,
+				761089291AB3B3D500EEC70D /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1126,6 +1293,7 @@
 				529AF0F71A7286F20077DF37 /* AFURLRequestSerialization.m in Sources */,
 				529AF0FA1A7286F20077DF37 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				55606C751AA18A8500863223 /* readme.md in Sources */,
+				761089361AB3B3F200EEC70D /* com.m in Sources */,
 				55B7D92F1A96114F00441C11 /* CLClassList.m in Sources */,
 				528649A61A8B7FAF009A77B1 /* IQTitleBarButtonItem.m in Sources */,
 				55B7D9321A96114F00441C11 /* UIImage+Utility.m in Sources */,
@@ -1155,6 +1323,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7610890B1AB3B3D400EEC70D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				761089371AB3B4C900EEC70D /* Global.m in Sources */,
+				7610893D1AB3B7C500EEC70D /* PatientTableViewController.swift in Sources */,
+				761089171AB3B3D400EEC70D /* NotificationController.swift in Sources */,
+				761089151AB3B3D400EEC70D /* InterfaceController.swift in Sources */,
+				761089191AB3B3D400EEC70D /* GlanceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1162,6 +1342,16 @@
 			isa = PBXTargetDependency;
 			target = 52FB9A591A6C532700E71D16 /* PACS */;
 			targetProxy = 52FB9A741A6C532800E71D16 /* PBXContainerItemProxy */;
+		};
+		761089211AB3B3D500EEC70D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7610891D1AB3B3D400EEC70D /* PACS WatchKit App */;
+			targetProxy = 761089201AB3B3D500EEC70D /* PBXContainerItemProxy */;
+		};
+		7610892B1AB3B3D500EEC70D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7610890E1AB3B3D400EEC70D /* PACS WatchKit Extension */;
+			targetProxy = 7610892A1AB3B3D500EEC70D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1182,6 +1372,14 @@
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
+		761089251AB3B3D500EEC70D /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				761089261AB3B3D500EEC70D /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -1189,11 +1387,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv7s,
-					i386,
-					"$(ARCHS_STANDARD)",
-				);
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -1230,6 +1423,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "51c148d6-e6ba-4e9e-b2a7-700f60ff8b56";
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/atx-dr/Desktop/v3/com.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7 armv7s i386";
 			};
@@ -1239,11 +1433,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv7s,
-					i386,
-					"$(ARCHS_STANDARD)",
-				);
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -1274,6 +1463,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "51c148d6-e6ba-4e9e-b2a7-700f60ff8b56";
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/atx-dr/Desktop/v3/com.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = "arm64 armv7 armv7s i386";
@@ -1283,14 +1473,11 @@
 		52FB9A7E1A6C532800E71D16 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					"$(ARCHS_STANDARD)",
-					armv7s,
-					arm64,
-				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)$(SYSTEM_LIBRARY_DIR)/Frameworks",
@@ -1302,11 +1489,13 @@
 					"PACS/framework/Source/**",
 				);
 				INFOPLIST_FILE = PACS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "PACS WatchKit App/PACS-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
@@ -1315,14 +1504,11 @@
 		52FB9A7F1A6C532800E71D16 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					"$(ARCHS_STANDARD)",
-					armv7s,
-					arm64,
-				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)$(SYSTEM_LIBRARY_DIR)/Frameworks",
@@ -1334,11 +1520,12 @@
 					"PACS/framework/Source/**",
 				);
 				INFOPLIST_FILE = PACS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "PACS WatchKit App/PACS-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
@@ -1384,6 +1571,79 @@
 			};
 			name = Release;
 		};
+		7610892E1AB3B3D500EEC70D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = PACS_WatchKit_Extension;
+				INFOPLIST_FILE = "PACS WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		7610892F1AB3B3D500EEC70D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				IBSC_MODULE = PACS_WatchKit_Extension;
+				INFOPLIST_FILE = "PACS WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
+		761089311AB3B3D500EEC70D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "PACS WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		761089321AB3B3D500EEC70D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "PACS WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1410,6 +1670,24 @@
 			buildConfigurations = (
 				52FB9A811A6C532800E71D16 /* Debug */,
 				52FB9A821A6C532800E71D16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7610892D1AB3B3D500EEC70D /* Build configuration list for PBXNativeTarget "PACS WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7610892E1AB3B3D500EEC70D /* Debug */,
+				7610892F1AB3B3D500EEC70D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		761089301AB3B3D500EEC70D /* Build configuration list for PBXNativeTarget "PACS WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				761089311AB3B3D500EEC70D /* Debug */,
+				761089321AB3B3D500EEC70D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

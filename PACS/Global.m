@@ -8,7 +8,6 @@
 
 #import "Global.h"
 #import "define.h"
-#define wadourl = [txtWadoUrl.text]
 
 @implementation Global
 

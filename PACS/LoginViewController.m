@@ -28,6 +28,7 @@
     self.txtUsername.delegate = self;
     self.txtPassword.delegate = self;
     self.txtWadoUrl.delegate = self;
+   // NSLog(@"Testing");
     
 }
 

@@ -37,7 +37,6 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSLog(@"%d", m_arrSelection.count );
     return [m_arrSelection count];
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -190,7 +189,7 @@
         NSCalendar* calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
         
         NSDateComponents* components = [calendar components:NSCalendarUnitWeekday | NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay fromDate:dateFromFilteringForThisWeek];
-        NSDateComponents* componentsForEndDayOfTheCurrentWeek = [calendar components:NSWeekdayCalendarUnit | NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit fromDate:dateFromFilteringForThisWeek];
+        NSDateComponents* componentsForEndDayOfTheCurrentWeek = [calendar components:NSCalendarUnitWeekday | NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay fromDate:dateFromFilteringForThisWeek];
         
         [components setDay:([components day] - ([components weekday]-1))];
         [componentsForEndDayOfTheCurrentWeek setDay:([components day] + (7 - [components weekday]))];

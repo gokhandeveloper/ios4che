@@ -4,6 +4,21 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Glance - PACS WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>Notification - PACS WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>PACS WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>PACS.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -18,6 +33,26 @@
 			<true/>
 		</dict>
 		<key>52FB9A721A6C532800E71D16</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>761088F11AB3B19000EEC70D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7610891D1AB3B3D400EEC70D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7669430F1AB3802F00BA37D0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7669431E1AB3802F00BA37D0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
