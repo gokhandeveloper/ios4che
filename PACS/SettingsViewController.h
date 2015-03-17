@@ -11,7 +11,7 @@
 @interface SettingsViewController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate>
 
 {
-    NSArray *_pickerData;
+    NSMutableArray *_pickerData;
 }
 
 @property (weak, nonatomic) IBOutlet UITextField *usernameInSettings;

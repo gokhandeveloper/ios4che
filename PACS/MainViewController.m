@@ -88,6 +88,10 @@
             case AFNetworkReachabilityStatusReachableViaWWAN:
             {
                 NSLog(@"AFNetworkReachabilityStatusReachableViaWWAN");
+                UIAlertView * alert =[[UIAlertView alloc ] initWithTitle:nil message:@"Cellular connection has been reestablished" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+                [alert show];
+                 [self loginAction];
+                break;
             }
                 
             case AFNetworkReachabilityStatusReachableViaWiFi:
@@ -100,6 +104,7 @@
             case AFNetworkReachabilityStatusNotReachable:
             {
                 NSLog(@"AFNetworkReachabilityStatusNotReachable");// do whatever we wish when network is available
+                
                 break;
             }
             default:              // do whatever we wish when network is not available
@@ -175,12 +180,48 @@
         // show filtered data in the tableview
      
         [self.tblPatients reloadData];
-     
+//        [manager.reachabilityManager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+//            switch (status)   {
+//                case AFNetworkReachabilityStatusReachableViaWWAN:
+//                {
+//                    NSLog(@"AFNetworkReachabilityStatusReachableViaWWAN");
+//                }
+//                    
+//                case AFNetworkReachabilityStatusReachableViaWiFi:
+//                {
+//                    
+//                    [self loginAction];
+//                    
+//                    break;
+//                }
+//                case AFNetworkReachabilityStatusNotReachable:
+//                {
+//                    NSLog(@"AFNetworkReachabilityStatusNotReachable");// do whatever we wish when network is available
+//                    break;
+//                }
+//                default:              // do whatever we wish when network is not available
+//                    break;
+//            }
+//        }];
+//        
+ //      [manager.reachabilityManager startMonitoring];
      } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         [MBProgressHUD hideHUDForView:self.view animated:YES];
         NSLog(@"Error: %@", error);
+         UIAlertView * alert =[[UIAlertView alloc ] initWithTitle:@"Connection is lost" message:@"Check the server is still online & turn on cellular data or use Wi-Fi to access data" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:@"Settings", nil];
+         [alert show];
+         
+       
+         
      }];
     
+}
+- (void)alert:(UIAlertView *)alert didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 1)
+    {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"prefs:root=General"]];
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

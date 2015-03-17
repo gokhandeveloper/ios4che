@@ -134,6 +134,7 @@
 		769C86CD1AB7033300B7D595 /* universal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 769C86CF1AB7033300B7D595 /* universal.storyboard */; };
 		769C86D21AB708CF00B7D595 /* UITabBarControllerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 769C86D01AB708CF00B7D595 /* UITabBarControllerViewController.h */; };
 		769C86D31AB708CF00B7D595 /* UITabBarControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 769C86D11AB708CF00B7D595 /* UITabBarControllerViewController.m */; };
+		769C86D51AB7610000B7D595 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 769C86D41AB7610000B7D595 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -409,6 +410,7 @@
 		769C86CE1AB7033300B7D595 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/universal.storyboard; sourceTree = "<group>"; };
 		769C86D01AB708CF00B7D595 /* UITabBarControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITabBarControllerViewController.h; sourceTree = "<group>"; };
 		769C86D11AB708CF00B7D595 /* UITabBarControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITabBarControllerViewController.m; sourceTree = "<group>"; };
+		769C86D41AB7610000B7D595 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -416,6 +418,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				769C86D51AB7610000B7D595 /* SystemConfiguration.framework in Frameworks */,
 				5526A7661A96537C00405DC2 /* Accelerate.framework in Frameworks */,
 				55606C831AA453FD00863223 /* json-simple-1.1.1.jar in Frameworks */,
 				5526A7631A9640FE00405DC2 /* CoreGraphics.framework in Frameworks */,
@@ -627,6 +630,7 @@
 		52FB9A511A6C532700E71D16 = {
 			isa = PBXGroup;
 			children = (
+				769C86D41AB7610000B7D595 /* SystemConfiguration.framework */,
 				761089331AB3B3F200EEC70D /* com.h */,
 				761089341AB3B3F200EEC70D /* com.m */,
 				52FB9A5C1A6C532700E71D16 /* ios4che */,
