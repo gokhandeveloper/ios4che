@@ -12,6 +12,8 @@
 #import "AFHTTPRequestOperationManager.h"
 #import "define.h"
 #import "Global.h"
+#import "PacsServer.h"
+#import "PacsServerManager.h"
 @implementation SettingsViewController
 
 
@@ -20,10 +22,14 @@
     [super viewDidLoad];
     
     // Initialize Data
-    _pickerData = @[@"Better Life Clinic PACS", @"Hi2Life Chiropractic PACS", @"Testing PACS"];
+   // _pickerData = @[@"Better Life Clinic PACS", @"Hi2Life Chiropractic PACS", @"Testing PACS"];
     
     self.archivePicker.dataSource = self;
     self.archivePicker.delegate = self;
+    //_pickerData= [NSMutableArray arrayWithObjects:firstServer,secondServer, nil];
+
+
+
 }
 - (void) viewWillAppear:(BOOL)animated{
     
@@ -164,14 +170,30 @@
 // The number of rows of data
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
-    return _pickerData.count;
+    return [PacsServerManager pacsManager].pacsServers.count;
 }
 
 // The data to return for the row and component (column) that's being passed in
-- (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
-{
-    return _pickerData[row];
+- (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
+    
+     PacsServer *server = [[PacsServerManager pacsManager].pacsServers objectAtIndex:row];
+    return server.pacsName;
 }
+
+
+//- (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view
+//{
+//    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, pickerView.frame.size.width, 44)];
+//    
+//    PacsServer *server = [[PacsServerManager pacsManager].pacsServers objectAtIndex:row];
+//    label.text = [NSString stringWithFormat:@"%@", server.pacsName];
+//      //NSLog(@"%lu", (unsigned long)[PacsServerManager pacsManager].pacsServers.count);
+//   // NSLog(@"@%", server);
+//    
+//    
+//    return label;
+//    
+//}
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
     // This method is triggered whenever the user makes a change to the picker selection.
