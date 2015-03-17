@@ -20,7 +20,7 @@
     [super viewDidLoad];
     
     // Initialize Data
-    NSMutableArray *_pickerData = @[@"Better Life Clinic PACS", @"Hi2Life Chiropractic PACS", @"Testing PACS"];
+    _pickerData = @[@"Better Life Clinic PACS", @"Hi2Life Chiropractic PACS", @"Testing PACS"];
     
     self.archivePicker.dataSource = self;
     self.archivePicker.delegate = self;

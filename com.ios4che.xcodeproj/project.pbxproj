@@ -135,6 +135,13 @@
 		769C86D21AB708CF00B7D595 /* UITabBarControllerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 769C86D01AB708CF00B7D595 /* UITabBarControllerViewController.h */; };
 		769C86D31AB708CF00B7D595 /* UITabBarControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 769C86D11AB708CF00B7D595 /* UITabBarControllerViewController.m */; };
 		769C86D51AB7610000B7D595 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 769C86D41AB7610000B7D595 /* SystemConfiguration.framework */; };
+		76C1F2681AB836CD00A98FD3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76C1F2671AB836CD00A98FD3 /* Security.framework */; };
+		76C1F26B1AB8385E00A98FD3 /* AddPACSViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 76C1F2691AB8385E00A98FD3 /* AddPACSViewController.h */; };
+		76C1F26C1AB8385E00A98FD3 /* AddPACSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76C1F26A1AB8385E00A98FD3 /* AddPACSViewController.m */; };
+		76C1F26F1AB8387400A98FD3 /* EditPACSViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 76C1F26D1AB8387400A98FD3 /* EditPACSViewController.h */; };
+		76C1F2701AB8387400A98FD3 /* EditPACSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76C1F26E1AB8387400A98FD3 /* EditPACSViewController.m */; };
+		76C1F2731AB83B9C00A98FD3 /* KeychainItemWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 76C1F2711AB83B9C00A98FD3 /* KeychainItemWrapper.h */; };
+		76C1F2741AB83B9C00A98FD3 /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 76C1F2721AB83B9C00A98FD3 /* KeychainItemWrapper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -411,6 +418,13 @@
 		769C86D01AB708CF00B7D595 /* UITabBarControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITabBarControllerViewController.h; sourceTree = "<group>"; };
 		769C86D11AB708CF00B7D595 /* UITabBarControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITabBarControllerViewController.m; sourceTree = "<group>"; };
 		769C86D41AB7610000B7D595 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		76C1F2671AB836CD00A98FD3 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		76C1F2691AB8385E00A98FD3 /* AddPACSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddPACSViewController.h; path = ../AddPACSViewController.h; sourceTree = "<group>"; };
+		76C1F26A1AB8385E00A98FD3 /* AddPACSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddPACSViewController.m; path = ../AddPACSViewController.m; sourceTree = "<group>"; };
+		76C1F26D1AB8387400A98FD3 /* EditPACSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditPACSViewController.h; path = ../EditPACSViewController.h; sourceTree = "<group>"; };
+		76C1F26E1AB8387400A98FD3 /* EditPACSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditPACSViewController.m; path = ../EditPACSViewController.m; sourceTree = "<group>"; };
+		76C1F2711AB83B9C00A98FD3 /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KeychainItemWrapper.h; path = ../KeychainItemWrapper.h; sourceTree = "<group>"; };
+		76C1F2721AB83B9C00A98FD3 /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KeychainItemWrapper.m; path = ../KeychainItemWrapper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -418,6 +432,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76C1F2681AB836CD00A98FD3 /* Security.framework in Frameworks */,
 				769C86D51AB7610000B7D595 /* SystemConfiguration.framework in Frameworks */,
 				5526A7661A96537C00405DC2 /* Accelerate.framework in Frameworks */,
 				55606C831AA453FD00863223 /* json-simple-1.1.1.jar in Frameworks */,
@@ -448,6 +463,8 @@
 		521C7F511A89EF8800B8971A /* framework */ = {
 			isa = PBXGroup;
 			children = (
+				76C1F2671AB836CD00A98FD3 /* Security.framework */,
+				769C86D41AB7610000B7D595 /* SystemConfiguration.framework */,
 				5526A7651A96537C00405DC2 /* Accelerate.framework */,
 				5526A7621A9640FE00405DC2 /* CoreImage.framework */,
 				5526A75D1A963D8700405DC2 /* MessageUI.framework */,
@@ -551,6 +568,7 @@
 		529AF0C91A7286F20077DF37 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				76C1F2751AB83F7400A98FD3 /* Keychain */,
 				5286497D1A8B7FAF009A77B1 /* IQKeyBoardManager */,
 				524F3E541A89A02300FC12E7 /* AsyncImageView */,
 				529AF1021A72876E0077DF37 /* MBProgressHUD */,
@@ -630,7 +648,6 @@
 		52FB9A511A6C532700E71D16 = {
 			isa = PBXGroup;
 			children = (
-				769C86D41AB7610000B7D595 /* SystemConfiguration.framework */,
 				761089331AB3B3F200EEC70D /* com.h */,
 				761089341AB3B3F200EEC70D /* com.m */,
 				52FB9A5C1A6C532700E71D16 /* ios4che */,
@@ -687,6 +704,10 @@
 				52FE6CC21A898B3E004CBECB /* define.h */,
 				55B74BB51A9CDDE200A367A6 /* SettingsViewController.h */,
 				55B74BB61A9CDDE200A367A6 /* SettingsViewController.m */,
+				76C1F2691AB8385E00A98FD3 /* AddPACSViewController.h */,
+				76C1F26A1AB8385E00A98FD3 /* AddPACSViewController.m */,
+				76C1F26D1AB8387400A98FD3 /* EditPACSViewController.h */,
+				76C1F26E1AB8387400A98FD3 /* EditPACSViewController.m */,
 				52FB9A671A6C532700E71D16 /* Main_iPhone.storyboard */,
 				769C86CF1AB7033300B7D595 /* universal.storyboard */,
 				769C86D01AB708CF00B7D595 /* UITabBarControllerViewController.h */,
@@ -1056,6 +1077,15 @@
 			name = Assets;
 			sourceTree = "<group>";
 		};
+		76C1F2751AB83F7400A98FD3 /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				76C1F2721AB83B9C00A98FD3 /* KeychainItemWrapper.m */,
+				76C1F2711AB83B9C00A98FD3 /* KeychainItemWrapper.h */,
+			);
+			name = Keychain;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1063,7 +1093,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76C1F26F1AB8387400A98FD3 /* EditPACSViewController.h in Headers */,
+				76C1F26B1AB8385E00A98FD3 /* AddPACSViewController.h in Headers */,
 				761089351AB3B3F200EEC70D /* com.h in Headers */,
+				76C1F2731AB83B9C00A98FD3 /* KeychainItemWrapper.h in Headers */,
 				769C86D21AB708CF00B7D595 /* UITabBarControllerViewController.h in Headers */,
 				55B74BB71A9CDDE200A367A6 /* SettingsViewController.h in Headers */,
 				55B516911A9F93F30044FA54 /* StudyViewController.h in Headers */,
@@ -1289,6 +1322,7 @@
 				55B7D9341A96114F00441C11 /* _CLImageEditorViewController.m in Sources */,
 				55B7D92B1A96114F00441C11 /* CLImageEditorTheme+Private.m in Sources */,
 				5242A15B1A8C5C7A0013119D /* DateSelectViewController.m in Sources */,
+				76C1F26C1AB8385E00A98FD3 /* AddPACSViewController.m in Sources */,
 				55B7D91A1A96114F00441C11 /* CLDrawTool.m in Sources */,
 				529AF0FD1A7286F20077DF37 /* UIButton+AFNetworking.m in Sources */,
 				528649A71A8B7FAF009A77B1 /* IQToolbar.m in Sources */,
@@ -1318,6 +1352,7 @@
 				55B7D92A1A96114F00441C11 /* CLColorPickerView.m in Sources */,
 				528649A01A8B7FAF009A77B1 /* IQUIWindow+Hierarchy.m in Sources */,
 				55B7D91E1A96114F00441C11 /* CLHueEffect.m in Sources */,
+				76C1F2741AB83B9C00A98FD3 /* KeychainItemWrapper.m in Sources */,
 				55B7D9541A96114F00441C11 /* CLTextTool.m in Sources */,
 				529AF0F71A7286F20077DF37 /* AFURLRequestSerialization.m in Sources */,
 				529AF0FA1A7286F20077DF37 /* AFNetworkActivityIndicatorManager.m in Sources */,
@@ -1329,6 +1364,7 @@
 				529AF0F91A7286F20077DF37 /* AFURLSessionManager.m in Sources */,
 				52FB9A601A6C532700E71D16 /* main.m in Sources */,
 				55B7D94D1A96114F00441C11 /* CLSplashTool.m in Sources */,
+				76C1F2701AB8387400A98FD3 /* EditPACSViewController.m in Sources */,
 				55B7D91B1A96114F00441C11 /* CLBloomEffect.m in Sources */,
 				55B7D92E1A96114F00441C11 /* UIView+CLImageToolInfo.m in Sources */,
 				55B7D91F1A96114F00441C11 /* CLPixellateEffect.m in Sources */,

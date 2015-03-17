@@ -9,6 +9,7 @@
 #import "FilterViewController.h"
 #import "Global.h"
 #import "define.h"
+#import "MBProgressHUD.h"
 #import "CustomTextField.h"
 #import "MainViewController.h"
 #import "ModalityViewController.h"
@@ -28,7 +29,7 @@
 - (void) viewWillAppear:(BOOL)animated{
     
     [super viewWillAppear:animated];
-    
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     //customize navigation bar
     
     [self.navigationController setNavigationBarHidden:NO];
@@ -77,6 +78,7 @@
         self.txtModality.text = [Global sharedGlobal].strModality;
 //        [Global sharedGlobal].isFromModalityPickerToFilter = NO;
 //    }
+     [MBProgressHUD hideHUDForView:self.view animated:YES];
 }
 
 - (void) leftButtonHandler: (UINavigationItem *) item {

@@ -208,7 +208,7 @@
      } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         [MBProgressHUD hideHUDForView:self.view animated:YES];
         NSLog(@"Error: %@", error);
-         UIAlertView * alert =[[UIAlertView alloc ] initWithTitle:@"Connection is lost" message:@"Check the server is still online & turn on cellular data or use Wi-Fi to access data" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:@"Settings", nil];
+         UIAlertView * alert =[[UIAlertView alloc ] initWithTitle:@"Connection is lost" message:@"Check the server is still online & turn on cellular data or use Wi-Fi to access the server" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:@"Settings", nil];
          [alert show];
          
        
