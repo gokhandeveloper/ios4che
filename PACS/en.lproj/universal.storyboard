@@ -156,7 +156,11 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="PuJ-OB-q7a">
-                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="add" id="xuQ-KE-RfD"/>
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="add" id="xuQ-KE-RfD">
+                            <connections>
+                                <segue destination="Otm-pd-sgP" kind="modal" modalTransitionStyle="flipHorizontal" id="XGK-Z7-kES"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="edit" id="K4k-fJ-hnz"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
@@ -198,7 +202,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                             </textField>
-                            <textField clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="IP Adress of DCM4CHE Server" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yd0-55-8tN">
+                            <textField clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="IP Adress or URL of DCM4CHE Server" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yd0-55-8tN">
                                 <rect key="frame" x="130" y="193" width="421" height="30"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -254,8 +258,19 @@
                     </view>
                     <navigationItem key="navigationItem" id="pBr-12-bTe">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="cos-aK-EjN"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="8oO-sY-TaF"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="8oO-sY-TaF">
+                            <connections>
+                                <action selector="saveForAddPacs:" destination="UY8-4p-hYu" id="WPN-bN-RVc"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="apiDirectory" destination="oNf-nz-VcY" id="pm4-MO-5k5"/>
+                        <outlet property="pacsName" destination="Aks-RC-aDz" id="4SX-al-yED"/>
+                        <outlet property="password" destination="Nnk-Tf-OSV" id="deT-ff-enE"/>
+                        <outlet property="username" destination="ZAt-ze-rNk" id="9Ke-vi-5i7"/>
+                        <outlet property="wadoUrl" destination="yd0-55-8tN" id="XWY-JQ-Ri9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NnU-oa-SeV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -859,8 +874,19 @@
                     </view>
                     <navigationItem key="navigationItem" id="Xcr-2k-2Lo">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="DG8-Tb-qi7"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="fKb-f0-xGH"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="fKb-f0-xGH">
+                            <connections>
+                                <action selector="saveForEditPacs:" destination="tDp-7t-Uas" id="3X9-gW-gjF"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="apiDirectory" destination="Trj-Bh-la3" id="fue-Vh-VLM"/>
+                        <outlet property="pacsName" destination="3Az-jj-lOU" id="zrg-H1-ASk"/>
+                        <outlet property="password" destination="2Ds-yQ-e1K" id="F3Z-fp-byV"/>
+                        <outlet property="username" destination="yNc-a3-7qV" id="IEf-pz-ozg"/>
+                        <outlet property="wadoUrl" destination="una-ba-jNB" id="Ird-pl-w2z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1KC-76-rUm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
