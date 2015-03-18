@@ -120,10 +120,10 @@
             </objects>
             <point key="canvasLocation" x="1351" y="27"/>
         </scene>
-        <!--Settings View Controller-->
+        <!--Server Settings-->
         <scene sceneID="B55-r7-dCG">
             <objects>
-                <viewController id="EfC-xB-R6K" customClass="SettingsViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingsViewController" title="Server Settings" id="EfC-xB-R6K" customClass="SettingsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="v3w-sp-mFW"/>
                         <viewControllerLayoutGuide type="bottom" id="JpS-uj-TlP"/>
@@ -158,10 +158,14 @@
                     <navigationItem key="navigationItem" id="PuJ-OB-q7a">
                         <barButtonItem key="leftBarButtonItem" style="plain" systemItem="add" id="xuQ-KE-RfD">
                             <connections>
-                                <segue destination="Otm-pd-sgP" kind="modal" modalTransitionStyle="flipHorizontal" id="XGK-Z7-kES"/>
+                                <segue destination="fnu-Va-9Qr" kind="show" id="obg-k4-hHz"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="edit" id="K4k-fJ-hnz"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="edit" id="K4k-fJ-hnz">
+                            <connections>
+                                <segue destination="0li-Ul-33o" kind="show" id="3af-p9-lEb"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -170,7 +174,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XAQ-B0-ss9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3681" y="1236"/>
+            <point key="canvasLocation" x="3694" y="1231"/>
         </scene>
         <!--AddPACS View Controller-->
         <scene sceneID="I9L-ST-LnJ">
@@ -257,10 +261,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="pBr-12-bTe">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="cos-aK-EjN"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="cos-aK-EjN">
+                            <connections>
+                                <segue destination="EfC-xB-R6K" kind="show" id="kRe-CY-zY5"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="8oO-sY-TaF">
                             <connections>
                                 <action selector="saveForAddPacs:" destination="UY8-4p-hYu" id="WPN-bN-RVc"/>
+                                <segue destination="EfC-xB-R6K" kind="show" id="FGK-Dv-8T1"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -274,7 +283,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NnU-oa-SeV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5284" y="1236"/>
+            <point key="canvasLocation" x="4936" y="1252"/>
         </scene>
         <!--Studies-->
         <scene sceneID="FvQ-k1-BmY">
@@ -752,42 +761,6 @@
             </objects>
             <point key="canvasLocation" x="4506" y="379"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="eUq-so-Udh">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Otm-pd-sgP" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bzk-Zk-0Jr">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="UY8-4p-hYu" kind="relationship" relationship="rootViewController" id="6B3-zB-BwC"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tfO-KD-W8j" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4404" y="1236"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="GUk-9t-zTA">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gtR-BX-vUL" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sLX-bE-tKx">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="tDp-7t-Uas" kind="relationship" relationship="rootViewController" id="az0-wO-plg"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LE9-Wc-6XC" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4404" y="1974"/>
-        </scene>
         <!--EditPACS View Controller-->
         <scene sceneID="AmD-g4-7rQ">
             <objects>
@@ -873,10 +846,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Xcr-2k-2Lo">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="DG8-Tb-qi7"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="DG8-Tb-qi7">
+                            <connections>
+                                <segue destination="EfC-xB-R6K" kind="show" id="ZIu-yH-t24"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="fKb-f0-xGH">
                             <connections>
-                                <action selector="saveForEditPacs:" destination="tDp-7t-Uas" id="3X9-gW-gjF"/>
+                                <segue destination="EfC-xB-R6K" kind="show" id="MUZ-31-8Qh"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -890,11 +867,50 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1KC-76-rUm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5284" y="1983"/>
+            <point key="canvasLocation" x="4928" y="2556"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hne-hN-GhO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fnu-Va-9Qr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ihF-2p-2Qb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="UY8-4p-hYu" kind="relationship" relationship="rootViewController" id="IVC-uR-AL0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EeK-2S-m1P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3265" y="2556"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="R83-Dq-Hoy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0li-Ul-33o" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vTa-yZ-4oi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tDp-7t-Uas" kind="relationship" relationship="rootViewController" id="Ebr-3q-8CE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hZX-Y0-93Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4013" y="2556"/>
         </scene>
     </scenes>
     <resources>
         <image name="save.png" width="512" height="512"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="kRe-CY-zY5"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>

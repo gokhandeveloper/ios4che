@@ -7,6 +7,9 @@
 //
 
 #import "AddPACSViewController.h"
+#import "PacsServerManager.h"
+#import "PacsServer.h"
+#import "SettingsViewController.h"
 #import <KeychainItemWrapper.h>
 @interface AddPACSViewController ()
 
@@ -35,7 +38,7 @@
 */
 
 - (IBAction)saveForAddPacs:(id)sender {
-    
+    NSLog(@"Add button is working!");
     NSString *pacsNameFromAddPacsView, *usernameFromAddPacsView, *passwordFromAddPacsView, *wadoUrlFromAddPacsView, *portNumber, *http, *seperator, *loginWebService;
     
     pacsNameFromAddPacsView = self.pacsName.text;
@@ -58,6 +61,10 @@
     NSString *pacsNameTobePassedToPickerView = [keychain objectForKey:(__bridge id)kSecAttrService];
     NSLog(@"Pacsdata name is:%@ which contains the following array %@",pacsNameTobePassedToPickerView ,pacsDataArray);
     
+   [PacsServerManager pacsManager].pacsDataInStringArray = [NSString stringWithFormat:@"%@", pacsDataArray];
+    
+    SettingsViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"SettingsViewController"];
+    [self.navigationController pushViewController:vc animated:YES];
     
 }
 @end

@@ -12,8 +12,10 @@
 #import "AFHTTPRequestOperationManager.h"
 #import "define.h"
 #import "Global.h"
-#import "PacsServer.h"
 #import "PacsServerManager.h"
+#import "PacsServer.h"
+#import "SettingsViewController.h"
+#import <KeychainItemWrapper.h>
 @implementation SettingsViewController
 
 
@@ -26,7 +28,7 @@
     
     self.archivePicker.dataSource = self;
     self.archivePicker.delegate = self;
-    //_pickerData= [NSMutableArray arrayWithObjects:firstServer,secondServer, nil];
+    _pickerData= [[NSArray alloc] init];
 
 
 
@@ -50,6 +52,21 @@
     
     
 [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    KeychainItemWrapper *keychain =
+    [[KeychainItemWrapper alloc] initWithIdentifier:@"MyPacsData" accessGroup:nil];
+   NSString* jsonString = [keychain objectForKey:(__bridge id)kSecValueData];
+    
+    NSArray* array = nil;
+    
+    if(jsonString.length > 0)
+    {
+        id jsonObject = [NSJSONSerialization JSONObjectWithData:[jsonString dataUsingEncoding:NSUTF8StringEncoding] options:0 error:nil];
+        
+        //  Type check because the JSON serializer can return an array or dictionary
+        if([jsonObject isKindOfClass:[NSArray class]])
+            _pickerData = jsonObject;
+    }
+    NSLog(@"Pacs data in settingsview:%@", _pickerData);
     
     NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
     NSString *wadoUrlKey = nil;
@@ -170,14 +187,20 @@
 // The number of rows of data
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
-    return [PacsServerManager pacsManager].pacsServers.count;
+    return _pickerData.count;
 }
 
 // The data to return for the row and component (column) that's being passed in
 - (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
+//    
+
+    NSString *pacsName =  [_pickerData objectAtIndex:row];
     
-     PacsServer *server = [[PacsServerManager pacsManager].pacsServers objectAtIndex:row];
-    return server.pacsName;
+    
+//     PacsServerManager *server = [[PacsServerManager pacsManager].pacsServers objectAtIndex:row];
+    //return server.pacsName;
+    NSLog(@"pacnsmaer%@", pacsName);
+    return  pacsName;
 }
 
 
@@ -198,6 +221,8 @@
 {
     // This method is triggered whenever the user makes a change to the picker selection.
     // The parameter named row and component represents what was selected.
+    
+    
 }
 
 @end
