@@ -14,6 +14,7 @@
 #import "Global.h"
 #import "PacsServerManager.h"
 #import "PacsServer.h"
+#import "AddPACSViewController.h"
 #import "SettingsViewController.h"
 #import <KeychainItemWrapper.h>
 @implementation SettingsViewController
@@ -24,13 +25,17 @@
     [super viewDidLoad];
     
     // Initialize Data
-   // _pickerData = @[@"Better Life Clinic PACS", @"Hi2Life Chiropractic PACS", @"Testing PACS"];
+    
     
     self.archivePicker.dataSource = self;
     self.archivePicker.delegate = self;
-    _pickerData= [[NSArray alloc] init];
-
-
+    [PacsServerManager pacsManager ].pacsServers= [[NSMutableArray alloc] init];
+    
+//    _pickerData = [PacsServerManager pacsManager].pacsServers;
+//    _pickerData = [[NSMutableArray alloc]init];
+   // [[PacsServerManager pacsManager].pacsServers addObject:@"1"];
+    
+[self.archivePicker reloadAllComponents];
 
 }
 - (void) viewWillAppear:(BOOL)animated{
@@ -50,24 +55,9 @@
     
     [super viewDidAppear:animated];
     
-    
+    [self.archivePicker reloadAllComponents];
 [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    KeychainItemWrapper *keychain =
-    [[KeychainItemWrapper alloc] initWithIdentifier:@"MyPacsData" accessGroup:nil];
-   NSString* jsonString = [keychain objectForKey:(__bridge id)kSecValueData];
-    
-    NSArray* array = nil;
-    
-    if(jsonString.length > 0)
-    {
-        id jsonObject = [NSJSONSerialization JSONObjectWithData:[jsonString dataUsingEncoding:NSUTF8StringEncoding] options:0 error:nil];
-        
-        //  Type check because the JSON serializer can return an array or dictionary
-        if([jsonObject isKindOfClass:[NSArray class]])
-            _pickerData = jsonObject;
-    }
-    NSLog(@"Pacs data in settingsview:%@", _pickerData);
-    
+ 
     NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
     NSString *wadoUrlKey = nil;
     NSString *webServiceDirectoryKey = nil;
@@ -187,20 +177,25 @@
 // The number of rows of data
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
-    return _pickerData.count;
+    
+    //NSLog(@"%lu", (unsigned long)[PacsServerManager pacsManager].pacsServers count);
+    return [PacsServerManager pacsManager].pacsServers.count;
+    
 }
 
 // The data to return for the row and component (column) that's being passed in
 - (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
-//    
+  
+    NSLog(@"Pacs data in settingsview:%@", [PacsServerManager pacsManager].pacsServers);
+    
 
-    NSString *pacsName =  [_pickerData objectAtIndex:row];
+    PacsServer *server = [[PacsServerManager pacsManager].pacsServers objectAtIndex:row];
+    NSString *name = server.pacsName;
+    NSLog(@"Servername:%@", server.pacsName);
+  
+    return name;
     
     
-//     PacsServerManager *server = [[PacsServerManager pacsManager].pacsServers objectAtIndex:row];
-    //return server.pacsName;
-    NSLog(@"pacnsmaer%@", pacsName);
-    return  pacsName;
 }
 
 
@@ -213,7 +208,7 @@
 //      //NSLog(@"%lu", (unsigned long)[PacsServerManager pacsManager].pacsServers.count);
 //   // NSLog(@"@%", server);
 //    
-//    
+//    [self.archivePicker reloadAllComponents];
 //    return label;
 //    
 //}

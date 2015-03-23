@@ -20,6 +20,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+  //   [PacsServerManager pacsManager ].pacsServers= [[NSMutableArray alloc] init];
+   
 }
 
 - (void)didReceiveMemoryWarning {
@@ -38,7 +40,7 @@
 */
 
 - (IBAction)saveForAddPacs:(id)sender {
-    NSLog(@"Add button is working!");
+   
     NSString *pacsNameFromAddPacsView, *usernameFromAddPacsView, *passwordFromAddPacsView, *wadoUrlFromAddPacsView, *portNumber, *http, *seperator, *loginWebService;
     
     pacsNameFromAddPacsView = self.pacsName.text;
@@ -47,7 +49,7 @@
     wadoUrlFromAddPacsView =self.wadoUrl.text;
     loginWebService = self.apiDirectory.text;
     
-    
+     NSLog(@"Add button is working!");
     addNewPacs = @[pacsNameFromAddPacsView, usernameFromAddPacsView, passwordFromAddPacsView, wadoUrlFromAddPacsView, loginWebService];
     
     NSData *newPacsData = [NSJSONSerialization dataWithJSONObject:addNewPacs options:0 error:NULL];
@@ -61,10 +63,36 @@
     NSString *pacsNameTobePassedToPickerView = [keychain objectForKey:(__bridge id)kSecAttrService];
     NSLog(@"Pacsdata name is:%@ which contains the following array %@",pacsNameTobePassedToPickerView ,pacsDataArray);
     
-   [PacsServerManager pacsManager].pacsDataInStringArray = [NSString stringWithFormat:@"%@", pacsDataArray];
+ PacsServer *newPacsServer = [[PacsServer alloc] init];
+//    
+//    if(pacsDataArray.length > 0)
+//    {
+//        id jsonObject = [NSJSONSerialization JSONObjectWithData:[pacsDataArray dataUsingEncoding:NSUTF8StringEncoding] options:0 error:nil];
+//        
+//        //  Type check because the JSON serializer can return an array or dictionary
+//        if([jsonObject isKindOfClass:[NSMutableArray class]])
+//        {
+//        
+//        newPacsServer.dataArrayIncludesUsernamePasswordWadoLoginWebServiceAndSecurity = jsonObject;
+//        //
+//       
+//              }
+//        [[PacsServerManager pacsManager].pacsServers addObject:newPacsServer];
+//        NSLog(@"json obhect%@", jsonObject);
+//  // _pickerData = jsonObject;
+//    }
+//  
+//    
     
-    SettingsViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"SettingsViewController"];
-    [self.navigationController pushViewController:vc animated:YES];
+    newPacsServer.pacsName= pacsNameFromAddPacsView;
+    newPacsServer.dataArrayIncludesUsernamePasswordWadoLoginWebServiceAndSecurity = pacsDataArray;
+    [[PacsServerManager pacsManager].pacsServers addObject:newPacsServer];
+     
+    //NSLog(@"%@", [PacsServerManager pacsManager].pacsServers);
+   // SettingsViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"SettingsViewController"];
+  //  [self.navigationController pushViewController:vc animated:YES];
+    
+  //[self.navigationController popViewControllerAnimated:YES];
     
 }
 @end

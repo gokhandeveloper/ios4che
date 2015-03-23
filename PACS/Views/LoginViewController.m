@@ -12,6 +12,8 @@
 #import "AFHTTPRequestOperationManager.h"
 #import "define.h"
 #import "Global.h"
+#import "PacsServerManager.h"
+#import "PacsServer.h"
 @interface LoginViewController ()
 
 
@@ -169,12 +171,12 @@
         if ([strResponse isEqualToString:@"1"]){
             
             [MBProgressHUD hideHUDForView:self.view animated:YES];
+            PacsServer *newPacsServer = [[PacsServer alloc] init];            newPacsServer.pacsName= webServiceDirectory;
             
-          [[NSUserDefaults standardUserDefaults] setBool:YES forKey:ISLOGGED_IN];
+            [[PacsServerManager pacsManager].pacsServers addObject:newPacsServer];          [[NSUserDefaults standardUserDefaults] setBool:YES forKey:ISLOGGED_IN];
             [self dismissViewControllerAnimated:YES completion:nil];
             NSLog(@"%@", [[NSUserDefaults standardUserDefaults] dictionaryRepresentation]);
             
-         
             
         }else{
             UIAlertView * alert =[[UIAlertView alloc ] initWithTitle:nil

@@ -12,7 +12,7 @@
 
 {
     NSArray * addNewPacs;
-
+    NSMutableArray *pacsServerArray;
 }
 @property (weak, nonatomic) IBOutlet UITextField *pacsName;
 @property (weak, nonatomic) IBOutlet UITextField *username;

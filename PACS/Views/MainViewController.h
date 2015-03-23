@@ -12,9 +12,9 @@
 
 {
     
-    NSMutableArray *m_arrPatient;
+    NSArray *m_arrPatient;
     //NSString *turlFromLoginViewController;
-    NSMutableArray *m_arrPatientSortedByStudyPk;
+    NSArray *m_arrPatientSortedByStudyPk;
 }
 
 

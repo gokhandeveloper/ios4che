@@ -23,29 +23,12 @@
 -(id) init {
     
     if(self =[super init]){
- //test to see if it works.
-//        PacsServer *firstServer = [[PacsServer alloc] init];
-//        firstServer.pacsName = @"HelloCHiro";
-//        firstServer.username = @"Admin";
-//        firstServer.password = @"Unknown";
-//        firstServer.wadoUrl = @"10.0.0.12";
-//
-//        PacsServer *secondServer = [[PacsServer alloc] init];
-//        secondServer .pacsName = @"CatVet";
-//        secondServer .username = @"user";
-//        secondServer .password = @"user";
-//        secondServer .wadoUrl = @"192.1.1.1";
-//       _pacsServers = [NSMutableArray arrayWithObjects:firstServer,secondServer, nil];
         
-       
-        self.pacsDataInStringArray=@"";
-        self.pacsName=@"";
-        self.username=@"";
-        self.password=@"";
-        self.wadoUrl= @"";
-        self.apiDirectory=@"";
-        self.switchPosition=@"";
+        PacsServer *server= [[PacsServer alloc] init];
+        
+        _pacsServers = [NSMutableArray arrayWithObjects:server, nil];
     }
+    
     return self;
 }
 

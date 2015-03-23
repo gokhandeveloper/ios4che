@@ -250,12 +250,13 @@
    
     NSSortDescriptor *sortDescriptor;
     sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"study_pk.intValue" ascending:YES];
-   NSMutableArray *sortDescriptors = [NSMutableArray arrayWithObject:sortDescriptor];
+   NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
     
     m_arrPatientSortedByStudyPk = [m_arrPatient sortedArrayUsingDescriptors:sortDescriptors];
                                  
         NSString *strPatientName = [[m_arrPatientSortedByStudyPk[indexPath.row][@"patient_name"] componentsSeparatedByCharactersInSet:[[NSCharacterSet characterSetWithCharactersInString:@"ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"]  invertedSet]] componentsJoinedByString:@" "];
         cell.textLabel.text = [NSString stringWithFormat:@"%@\nStudy Date: %@\nModality: %@", strPatientName, m_arrPatientSortedByStudyPk[indexPath.row][@"study_datetime"], m_arrPatientSortedByStudyPk[indexPath.row] [@"study_mods"]];
+    
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     NSLog(@"can you hear me table view! Testing the console only");

@@ -261,15 +261,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="pBr-12-bTe">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="cos-aK-EjN">
-                            <connections>
-                                <segue destination="EfC-xB-R6K" kind="show" id="kRe-CY-zY5"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="cos-aK-EjN"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="8oO-sY-TaF">
                             <connections>
                                 <action selector="saveForAddPacs:" destination="UY8-4p-hYu" id="WPN-bN-RVc"/>
-                                <segue destination="EfC-xB-R6K" kind="show" id="FGK-Dv-8T1"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -910,7 +905,7 @@
         <image name="save.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="kRe-CY-zY5"/>
+        <segue reference="ZIu-yH-t24"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>

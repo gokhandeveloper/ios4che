@@ -14,5 +14,6 @@
 @property ( nonatomic) NSString*password;
 @property (nonatomic) NSString *wadoUrl;
 @property ( nonatomic) NSString *apiDirectory;
+@property ( nonatomic) NSString *dataArrayIncludesUsernamePasswordWadoLoginWebServiceAndSecurity;
 
 @end

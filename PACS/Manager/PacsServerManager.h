@@ -12,11 +12,5 @@
 +(instancetype)pacsManager ;
 
 @property NSMutableArray *pacsServers;
-@property ( nonatomic) NSString *pacsDataInStringArray;
-@property ( nonatomic) NSString *pacsName;
-@property (nonatomic) NSString*username;
-@property ( nonatomic) NSString*password;
-@property (nonatomic) NSString *wadoUrl;
-@property ( nonatomic) NSString *apiDirectory;
-@property ( nonatomic) NSString *switchPosition;
+
 @end
