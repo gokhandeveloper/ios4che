@@ -28,18 +28,12 @@
     
     
     self.archivePicker.dataSource = self;
-    self.archivePicker.delegate = self;
-    [PacsServerManager pacsManager ].pacsServers= [[NSMutableArray alloc] init];
-    
-//    _pickerData = [PacsServerManager pacsManager].pacsServers;
-//    _pickerData = [[NSMutableArray alloc]init];
    // [[PacsServerManager pacsManager].pacsServers addObject:@"1"];
-    
-[self.archivePicker reloadAllComponents];
+
 
 }
 - (void) viewWillAppear:(BOOL)animated{
-    
+    [self.archivePicker reloadAllComponents];
     [super viewWillAppear:animated];
     
    // [self.navigationController setNavigationBarHidden:YES];
@@ -71,6 +65,8 @@
     
       [MBProgressHUD hideHUDForView:self.view animated:YES];
 }
+
+
 
 - (IBAction)saveSettingsButton:(id)sender {
      [MBProgressHUD showHUDAddedTo:self.view animated:YES];
@@ -191,8 +187,9 @@
 
     PacsServer *server = [[PacsServerManager pacsManager].pacsServers objectAtIndex:row];
     NSString *name = server.pacsName;
-    NSLog(@"Servername:%@", server.pacsName);
-  
+  //  NSArray *data = server.dataArrayIncludesUsernamePasswordWadoLoginWebServiceAndSecurity;
+    NSLog(@"Servername:%@, and the data %@", server.pacsName, server.dataArrayIncludesUsernamePasswordWadoLoginWebServiceAndSecurity);
+    
     return name;
     
     

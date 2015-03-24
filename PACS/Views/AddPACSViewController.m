@@ -21,7 +21,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
   //   [PacsServerManager pacsManager ].pacsServers= [[NSMutableArray alloc] init];
-   
+    UIBarButtonItem *saveButton = [[UIBarButtonItem alloc] initWithTitle:@"Save" style:UIBarButtonItemStylePlain  target:self action:@selector(saveForAddPacs:)];
+    self.navigationItem.rightBarButtonItem = saveButton;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,7 +40,7 @@
 }
 */
 
-- (IBAction)saveForAddPacs:(id)sender {
+- (void)saveForAddPacs:(id)sender {
    
     NSString *pacsNameFromAddPacsView, *usernameFromAddPacsView, *passwordFromAddPacsView, *wadoUrlFromAddPacsView, *portNumber, *http, *seperator, *loginWebService;
     
@@ -89,10 +90,13 @@
     [[PacsServerManager pacsManager].pacsServers addObject:newPacsServer];
      
     //NSLog(@"%@", [PacsServerManager pacsManager].pacsServers);
-   // SettingsViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"SettingsViewController"];
-  //  [self.navigationController pushViewController:vc animated:YES];
-    
+//    SettingsViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"SettingsViewController"];
+//   [self presentViewController:vc animated:YES completion:nil];
+//    
+    [self performSegueWithIdentifier:@"Save" sender:self];
   //[self.navigationController popViewControllerAnimated:YES];
     
 }
+
+
 @end

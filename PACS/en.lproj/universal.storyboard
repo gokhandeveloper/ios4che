@@ -264,7 +264,7 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="cos-aK-EjN"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="8oO-sY-TaF">
                             <connections>
-                                <action selector="saveForAddPacs:" destination="UY8-4p-hYu" id="WPN-bN-RVc"/>
+                                <segue destination="EfC-xB-R6K" kind="show" identifier="Save" id="eHi-l8-znq"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -905,7 +905,7 @@
         <image name="save.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ZIu-yH-t24"/>
+        <segue reference="eHi-l8-znq"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>
