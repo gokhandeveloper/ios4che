@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "GPUImage.h"
+//#import "GPUImage.h"
 
 @interface DicomShowViewController : UIViewController
 <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITabBarDelegate, UIActionSheetDelegate, UIScrollViewDelegate>
